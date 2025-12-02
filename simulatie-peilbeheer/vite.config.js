@@ -36,9 +36,9 @@ export default defineConfig({
       }
     }
   ],
-  // Voor GitHub Pages: gebruik repository naam als base URL
-  // Repository: Water-Natuurlijk-Rijnland/hhvr -> base URL is /hhvr/
-  base: process.env.GITHUB_PAGES === 'true' ? '/hhvr/' : '/simulatie-peilbeheer/',
+  // Voor GitHub Pages: als "deploy from branch root" is ingesteld, gebruik /
+  // Als GitHub Actions deployment wordt gebruikt, gebruik /hhvr/
+  base: process.env.GITHUB_PAGES === 'true' ? '/' : '/simulatie-peilbeheer/',
   server: {
     fs: {
       allow: ['..']
