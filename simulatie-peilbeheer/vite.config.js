@@ -36,7 +36,9 @@ export default defineConfig({
       }
     }
   ],
-  base: process.env.GITHUB_PAGES === 'true' ? '/' : '/simulatie-peilbeheer/',
+  // Voor GitHub Pages: gebruik repository naam als base URL
+  // Repository: Water-Natuurlijk-Rijnland/hhvr -> base URL is /hhvr/
+  base: process.env.GITHUB_PAGES === 'true' ? '/hhvr/' : '/simulatie-peilbeheer/',
   server: {
     fs: {
       allow: ['..']
