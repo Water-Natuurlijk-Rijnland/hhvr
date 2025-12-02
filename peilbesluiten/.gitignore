@@ -13,7 +13,7 @@ logs/
 *.log
 
 # Gedownloade data (optioneel - verwijder deze regel als je de data wel wilt committen)
-rijnland_kaartlagen/
+
 
 # IDE
 .vscode/
@@ -26,3 +26,4 @@ rijnland_kaartlagen/
 .DS_Store
 Thumbs.db
 
+rijnland_kaartlagen/
