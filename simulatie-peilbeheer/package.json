@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npm run copy-kaartlagen && vite build",
+    "build": "vite build",
     "build:github": "GITHUB_PAGES=true npm run build",
     "copy-kaartlagen": "node scripts/copy-kaartlagen.js",
     "preview": "vite preview"

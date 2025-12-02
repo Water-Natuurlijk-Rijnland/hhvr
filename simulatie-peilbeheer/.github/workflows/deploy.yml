@@ -69,7 +69,7 @@ jobs:
       - name: Build
         working-directory: ./simulatie-peilbeheer
         env:
-          GITHUB_PAGES: true
+          GITHUB_PAGES: 'true'
         run: npm run build
 
       - name: Setup Pages
