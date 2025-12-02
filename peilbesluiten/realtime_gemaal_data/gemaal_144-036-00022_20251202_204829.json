@@ -1,0 +1,4056 @@
+{
+  "timestamp": "2025-12-02T20:48:29.819615",
+  "feature_identifier": "144-036-00022",
+  "chart_id": "e743fb87-2a02-4f3e-ac6c-03d03401aab8",
+  "data": {
+    "feature_identifier": "144-036-00022",
+    "timestamp": "2025-12-02T20:48:30.666123",
+    "time_range": {
+      "min": 1763495310000.0,
+      "max": 1764704970000.0
+    },
+    "yAxis": [
+      {
+        "title": "WNS2367.Gemaal - m3/s",
+        "min": -0.003,
+        "max": 0.033,
+        "id": "WNS2367.Gemaal - m3/s"
+      }
+    ],
+    "series": [
+      {
+        "name": "WNS2367.Gemaal - Vakgemaal Veenderpolder",
+        "type": "line",
+        "color": "#3b5983",
+        "data": [
+          {
+            "timestamp": "2025-11-18T21:19:30",
+            "timestamp_ms": 1763497170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-18T21:49:30",
+            "timestamp_ms": 1763498970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-18T22:19:30",
+            "timestamp_ms": 1763500770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-18T22:49:30",
+            "timestamp_ms": 1763502570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-18T23:19:30",
+            "timestamp_ms": 1763504370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-18T23:49:30",
+            "timestamp_ms": 1763506170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-19T00:19:30",
+            "timestamp_ms": 1763507970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-19T00:49:30",
+            "timestamp_ms": 1763509770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-19T01:19:30",
+            "timestamp_ms": 1763511570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-19T01:49:30",
+            "timestamp_ms": 1763513370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-19T02:19:30",
+            "timestamp_ms": 1763515170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-19T02:49:30",
+            "timestamp_ms": 1763516970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-19T03:19:30",
+            "timestamp_ms": 1763518770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-19T03:49:30",
+            "timestamp_ms": 1763520570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-19T04:19:30",
+            "timestamp_ms": 1763522370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-19T04:49:30",
+            "timestamp_ms": 1763524170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-19T05:19:30",
+            "timestamp_ms": 1763525970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-19T05:49:30",
+            "timestamp_ms": 1763527770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-19T06:19:30",
+            "timestamp_ms": 1763529570000.0,
+            "value": 0.01,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-19T06:49:30",
+            "timestamp_ms": 1763531370000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-19T07:19:30",
+            "timestamp_ms": 1763533170000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-19T07:49:30",
+            "timestamp_ms": 1763534970000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-19T08:19:30",
+            "timestamp_ms": 1763536770000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-19T08:49:30",
+            "timestamp_ms": 1763538570000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-19T09:19:30",
+            "timestamp_ms": 1763540370000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-19T09:49:30",
+            "timestamp_ms": 1763542170000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-19T10:19:30",
+            "timestamp_ms": 1763543970000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-19T10:49:30",
+            "timestamp_ms": 1763545770000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-19T11:19:30",
+            "timestamp_ms": 1763547570000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-19T11:49:30",
+            "timestamp_ms": 1763549370000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-19T12:19:30",
+            "timestamp_ms": 1763551170000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-19T12:49:30",
+            "timestamp_ms": 1763552970000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-19T13:19:30",
+            "timestamp_ms": 1763554770000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-19T13:49:30",
+            "timestamp_ms": 1763556570000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-19T14:19:30",
+            "timestamp_ms": 1763558370000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-19T14:49:30",
+            "timestamp_ms": 1763560170000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-19T15:19:30",
+            "timestamp_ms": 1763561970000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-19T15:49:30",
+            "timestamp_ms": 1763563770000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-19T16:19:30",
+            "timestamp_ms": 1763565570000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-19T16:49:30",
+            "timestamp_ms": 1763567370000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-19T17:19:30",
+            "timestamp_ms": 1763569170000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-19T17:49:30",
+            "timestamp_ms": 1763570970000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-19T18:19:30",
+            "timestamp_ms": 1763572770000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-19T18:49:30",
+            "timestamp_ms": 1763574570000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-19T19:19:30",
+            "timestamp_ms": 1763576370000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-19T19:49:30",
+            "timestamp_ms": 1763578170000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-19T20:19:30",
+            "timestamp_ms": 1763579970000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-19T20:49:30",
+            "timestamp_ms": 1763581770000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-19T21:19:30",
+            "timestamp_ms": 1763583570000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-19T21:49:30",
+            "timestamp_ms": 1763585370000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-19T22:19:30",
+            "timestamp_ms": 1763587170000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-19T22:49:30",
+            "timestamp_ms": 1763588970000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-19T23:19:30",
+            "timestamp_ms": 1763590770000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-19T23:49:30",
+            "timestamp_ms": 1763592570000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-20T00:19:30",
+            "timestamp_ms": 1763594370000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-20T00:49:30",
+            "timestamp_ms": 1763596170000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-20T01:19:30",
+            "timestamp_ms": 1763597970000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-20T01:49:30",
+            "timestamp_ms": 1763599770000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-20T02:19:30",
+            "timestamp_ms": 1763601570000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-20T02:49:30",
+            "timestamp_ms": 1763603370000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-20T03:19:30",
+            "timestamp_ms": 1763605170000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-20T03:49:30",
+            "timestamp_ms": 1763606970000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-20T04:19:30",
+            "timestamp_ms": 1763608770000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-20T04:49:30",
+            "timestamp_ms": 1763610570000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-20T05:19:30",
+            "timestamp_ms": 1763612370000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-20T05:49:30",
+            "timestamp_ms": 1763614170000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-20T06:19:30",
+            "timestamp_ms": 1763615970000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-20T06:49:30",
+            "timestamp_ms": 1763617770000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-20T07:19:30",
+            "timestamp_ms": 1763619570000.0,
+            "value": 0.01,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-20T07:49:30",
+            "timestamp_ms": 1763621370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-20T08:19:30",
+            "timestamp_ms": 1763623170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-20T08:49:30",
+            "timestamp_ms": 1763624970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-20T09:19:30",
+            "timestamp_ms": 1763626770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-20T09:49:30",
+            "timestamp_ms": 1763628570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-20T10:19:30",
+            "timestamp_ms": 1763630370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-20T10:49:30",
+            "timestamp_ms": 1763632170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-20T11:19:30",
+            "timestamp_ms": 1763633970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-20T11:49:30",
+            "timestamp_ms": 1763635770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-20T12:19:30",
+            "timestamp_ms": 1763637570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-20T12:49:30",
+            "timestamp_ms": 1763639370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-20T13:19:30",
+            "timestamp_ms": 1763641170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-20T13:49:30",
+            "timestamp_ms": 1763642970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-20T14:19:30",
+            "timestamp_ms": 1763644770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-20T14:49:30",
+            "timestamp_ms": 1763646570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-20T15:19:30",
+            "timestamp_ms": 1763648370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-20T15:49:30",
+            "timestamp_ms": 1763650170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-20T16:19:30",
+            "timestamp_ms": 1763651970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-20T16:49:30",
+            "timestamp_ms": 1763653770000.0,
+            "value": 0.01,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-20T17:19:30",
+            "timestamp_ms": 1763655570000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-20T17:49:30",
+            "timestamp_ms": 1763657370000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-20T18:19:30",
+            "timestamp_ms": 1763659170000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-20T18:49:30",
+            "timestamp_ms": 1763660970000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-20T19:19:30",
+            "timestamp_ms": 1763662770000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-20T19:49:30",
+            "timestamp_ms": 1763664570000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-20T20:19:30",
+            "timestamp_ms": 1763666370000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-20T20:49:30",
+            "timestamp_ms": 1763668170000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-20T21:19:30",
+            "timestamp_ms": 1763669970000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-20T21:49:30",
+            "timestamp_ms": 1763671770000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-20T22:19:30",
+            "timestamp_ms": 1763673570000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-20T22:49:30",
+            "timestamp_ms": 1763675370000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-20T23:19:30",
+            "timestamp_ms": 1763677170000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-20T23:49:30",
+            "timestamp_ms": 1763678970000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-21T00:19:30",
+            "timestamp_ms": 1763680770000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-21T00:49:30",
+            "timestamp_ms": 1763682570000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-21T01:19:30",
+            "timestamp_ms": 1763684370000.0,
+            "value": 0.02,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-21T01:49:30",
+            "timestamp_ms": 1763686170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-21T02:19:30",
+            "timestamp_ms": 1763687970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-21T02:49:30",
+            "timestamp_ms": 1763689770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-21T03:19:30",
+            "timestamp_ms": 1763691570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-21T03:49:30",
+            "timestamp_ms": 1763693370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-21T04:19:30",
+            "timestamp_ms": 1763695170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-21T04:49:30",
+            "timestamp_ms": 1763696970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-21T05:19:30",
+            "timestamp_ms": 1763698770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-21T05:49:30",
+            "timestamp_ms": 1763700570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-21T06:19:30",
+            "timestamp_ms": 1763702370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-21T06:49:30",
+            "timestamp_ms": 1763704170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-21T07:19:30",
+            "timestamp_ms": 1763705970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-21T07:49:30",
+            "timestamp_ms": 1763707770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-21T08:19:30",
+            "timestamp_ms": 1763709570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-21T08:49:30",
+            "timestamp_ms": 1763711370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-21T09:19:30",
+            "timestamp_ms": 1763713170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-21T09:49:30",
+            "timestamp_ms": 1763714970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-21T10:19:30",
+            "timestamp_ms": 1763716770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-21T10:49:30",
+            "timestamp_ms": 1763718570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-21T11:19:30",
+            "timestamp_ms": 1763720370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-21T11:49:30",
+            "timestamp_ms": 1763722170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-21T12:19:30",
+            "timestamp_ms": 1763723970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-21T12:49:30",
+            "timestamp_ms": 1763725770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-21T13:19:30",
+            "timestamp_ms": 1763727570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-21T13:49:30",
+            "timestamp_ms": 1763729370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-21T14:19:30",
+            "timestamp_ms": 1763731170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-21T14:49:30",
+            "timestamp_ms": 1763732970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-21T15:19:30",
+            "timestamp_ms": 1763734770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-21T15:49:30",
+            "timestamp_ms": 1763736570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-21T16:19:30",
+            "timestamp_ms": 1763738370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-21T16:49:30",
+            "timestamp_ms": 1763740170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-21T17:19:30",
+            "timestamp_ms": 1763741970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-21T17:49:30",
+            "timestamp_ms": 1763743770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-21T18:19:30",
+            "timestamp_ms": 1763745570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-21T18:49:30",
+            "timestamp_ms": 1763747370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-21T19:19:30",
+            "timestamp_ms": 1763749170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-21T19:49:30",
+            "timestamp_ms": 1763750970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-21T20:19:30",
+            "timestamp_ms": 1763752770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-21T20:49:30",
+            "timestamp_ms": 1763754570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-21T21:19:30",
+            "timestamp_ms": 1763756370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-21T21:49:30",
+            "timestamp_ms": 1763758170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-21T22:19:30",
+            "timestamp_ms": 1763759970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-21T22:49:30",
+            "timestamp_ms": 1763761770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-21T23:19:30",
+            "timestamp_ms": 1763763570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-21T23:49:30",
+            "timestamp_ms": 1763765370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-22T00:19:30",
+            "timestamp_ms": 1763767170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-22T00:49:30",
+            "timestamp_ms": 1763768970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-22T01:19:30",
+            "timestamp_ms": 1763770770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-22T01:49:30",
+            "timestamp_ms": 1763772570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-22T02:19:30",
+            "timestamp_ms": 1763774370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-22T02:49:30",
+            "timestamp_ms": 1763776170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-22T03:19:30",
+            "timestamp_ms": 1763777970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-22T03:49:30",
+            "timestamp_ms": 1763779770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-22T04:19:30",
+            "timestamp_ms": 1763781570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-22T04:49:30",
+            "timestamp_ms": 1763783370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-22T05:19:30",
+            "timestamp_ms": 1763785170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-22T05:49:30",
+            "timestamp_ms": 1763786970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-22T06:19:30",
+            "timestamp_ms": 1763788770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-22T06:49:30",
+            "timestamp_ms": 1763790570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-22T07:19:30",
+            "timestamp_ms": 1763792370000.0,
+            "value": 0.01,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-22T07:49:30",
+            "timestamp_ms": 1763794170000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-22T08:19:30",
+            "timestamp_ms": 1763795970000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-22T08:49:30",
+            "timestamp_ms": 1763797770000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-22T09:19:30",
+            "timestamp_ms": 1763799570000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-22T09:49:30",
+            "timestamp_ms": 1763801370000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-22T10:19:30",
+            "timestamp_ms": 1763803170000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-22T10:49:30",
+            "timestamp_ms": 1763804970000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-22T11:19:30",
+            "timestamp_ms": 1763806770000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-22T11:49:30",
+            "timestamp_ms": 1763808570000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-22T12:19:30",
+            "timestamp_ms": 1763810370000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-22T12:49:30",
+            "timestamp_ms": 1763812170000.0,
+            "value": 0.01,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-22T13:19:30",
+            "timestamp_ms": 1763813970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-22T13:49:30",
+            "timestamp_ms": 1763815770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-22T14:19:30",
+            "timestamp_ms": 1763817570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-22T14:49:30",
+            "timestamp_ms": 1763819370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-22T15:19:30",
+            "timestamp_ms": 1763821170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-22T15:49:30",
+            "timestamp_ms": 1763822970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-22T16:19:30",
+            "timestamp_ms": 1763824770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-22T16:49:30",
+            "timestamp_ms": 1763826570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-22T17:19:30",
+            "timestamp_ms": 1763828370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-22T17:49:30",
+            "timestamp_ms": 1763830170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-22T18:19:30",
+            "timestamp_ms": 1763831970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-22T18:49:30",
+            "timestamp_ms": 1763833770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-22T19:19:30",
+            "timestamp_ms": 1763835570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-22T19:49:30",
+            "timestamp_ms": 1763837370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-22T20:19:30",
+            "timestamp_ms": 1763839170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-22T20:49:30",
+            "timestamp_ms": 1763840970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-22T21:19:30",
+            "timestamp_ms": 1763842770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-22T21:49:30",
+            "timestamp_ms": 1763844570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-22T22:19:30",
+            "timestamp_ms": 1763846370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-22T22:49:30",
+            "timestamp_ms": 1763848170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-22T23:19:30",
+            "timestamp_ms": 1763849970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-22T23:49:30",
+            "timestamp_ms": 1763851770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-23T00:19:30",
+            "timestamp_ms": 1763853570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-23T00:49:30",
+            "timestamp_ms": 1763855370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-23T01:19:30",
+            "timestamp_ms": 1763857170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-23T01:49:30",
+            "timestamp_ms": 1763858970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-23T02:19:30",
+            "timestamp_ms": 1763860770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-23T02:49:30",
+            "timestamp_ms": 1763862570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-23T03:19:30",
+            "timestamp_ms": 1763864370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-23T03:49:30",
+            "timestamp_ms": 1763866170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-23T04:19:30",
+            "timestamp_ms": 1763867970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-23T04:49:30",
+            "timestamp_ms": 1763869770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-23T05:19:30",
+            "timestamp_ms": 1763871570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-23T05:49:30",
+            "timestamp_ms": 1763873370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-23T06:19:30",
+            "timestamp_ms": 1763875170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-23T06:49:30",
+            "timestamp_ms": 1763876970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-23T07:19:30",
+            "timestamp_ms": 1763878770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-23T07:49:30",
+            "timestamp_ms": 1763880570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-23T08:19:30",
+            "timestamp_ms": 1763882370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-23T08:49:30",
+            "timestamp_ms": 1763884170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-23T09:19:30",
+            "timestamp_ms": 1763885970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-23T09:49:30",
+            "timestamp_ms": 1763887770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-23T10:19:30",
+            "timestamp_ms": 1763889570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-23T10:49:30",
+            "timestamp_ms": 1763891370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-23T11:19:30",
+            "timestamp_ms": 1763893170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-23T11:49:30",
+            "timestamp_ms": 1763894970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-23T12:19:30",
+            "timestamp_ms": 1763896770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-23T12:49:30",
+            "timestamp_ms": 1763898570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-23T13:19:30",
+            "timestamp_ms": 1763900370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-23T13:49:30",
+            "timestamp_ms": 1763902170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-23T14:19:30",
+            "timestamp_ms": 1763903970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-23T14:49:30",
+            "timestamp_ms": 1763905770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-23T15:19:30",
+            "timestamp_ms": 1763907570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-23T15:49:30",
+            "timestamp_ms": 1763909370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-23T16:19:30",
+            "timestamp_ms": 1763911170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-23T16:49:30",
+            "timestamp_ms": 1763912970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-23T17:19:30",
+            "timestamp_ms": 1763914770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-23T17:49:30",
+            "timestamp_ms": 1763916570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-23T18:19:30",
+            "timestamp_ms": 1763918370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-23T18:49:30",
+            "timestamp_ms": 1763920170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-23T19:19:30",
+            "timestamp_ms": 1763921970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-23T19:49:30",
+            "timestamp_ms": 1763923770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-23T20:19:30",
+            "timestamp_ms": 1763925570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-23T20:49:30",
+            "timestamp_ms": 1763927370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-23T21:19:30",
+            "timestamp_ms": 1763929170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-23T21:49:30",
+            "timestamp_ms": 1763930970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-23T22:19:30",
+            "timestamp_ms": 1763932770000.0,
+            "value": 0.02,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-23T22:49:30",
+            "timestamp_ms": 1763934570000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-23T23:19:30",
+            "timestamp_ms": 1763936370000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-23T23:49:30",
+            "timestamp_ms": 1763938170000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-24T00:19:30",
+            "timestamp_ms": 1763939970000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-24T00:49:30",
+            "timestamp_ms": 1763941770000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-24T01:19:30",
+            "timestamp_ms": 1763943570000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-24T01:49:30",
+            "timestamp_ms": 1763945370000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-24T02:19:30",
+            "timestamp_ms": 1763947170000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-24T02:49:30",
+            "timestamp_ms": 1763948970000.0,
+            "value": 0.01,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-24T03:19:30",
+            "timestamp_ms": 1763950770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-24T03:49:30",
+            "timestamp_ms": 1763952570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-24T04:19:30",
+            "timestamp_ms": 1763954370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-24T04:49:30",
+            "timestamp_ms": 1763956170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-24T05:19:30",
+            "timestamp_ms": 1763957970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-24T05:49:30",
+            "timestamp_ms": 1763959770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-24T06:19:30",
+            "timestamp_ms": 1763961570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-24T06:49:30",
+            "timestamp_ms": 1763963370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-24T07:19:30",
+            "timestamp_ms": 1763965170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-24T07:49:30",
+            "timestamp_ms": 1763966970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-24T08:19:30",
+            "timestamp_ms": 1763968770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-24T08:49:30",
+            "timestamp_ms": 1763970570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-24T09:19:30",
+            "timestamp_ms": 1763972370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-24T09:49:30",
+            "timestamp_ms": 1763974170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-24T10:19:30",
+            "timestamp_ms": 1763975970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-24T10:49:30",
+            "timestamp_ms": 1763977770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-24T11:19:30",
+            "timestamp_ms": 1763979570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-24T11:49:30",
+            "timestamp_ms": 1763981370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-24T12:19:30",
+            "timestamp_ms": 1763983170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-24T12:49:30",
+            "timestamp_ms": 1763984970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-24T13:19:30",
+            "timestamp_ms": 1763986770000.0,
+            "value": 0.01,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-24T13:49:30",
+            "timestamp_ms": 1763988570000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-24T14:19:30",
+            "timestamp_ms": 1763990370000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-24T14:49:30",
+            "timestamp_ms": 1763992170000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-24T15:19:30",
+            "timestamp_ms": 1763993970000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-24T15:49:30",
+            "timestamp_ms": 1763995770000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-24T16:19:30",
+            "timestamp_ms": 1763997570000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-24T16:49:30",
+            "timestamp_ms": 1763999370000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-24T17:19:30",
+            "timestamp_ms": 1764001170000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-24T17:49:30",
+            "timestamp_ms": 1764002970000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-24T18:19:30",
+            "timestamp_ms": 1764004770000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-24T18:49:30",
+            "timestamp_ms": 1764006570000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-24T19:19:30",
+            "timestamp_ms": 1764008370000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-24T19:49:30",
+            "timestamp_ms": 1764010170000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-24T20:19:30",
+            "timestamp_ms": 1764011970000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-24T20:49:30",
+            "timestamp_ms": 1764013770000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-24T21:19:30",
+            "timestamp_ms": 1764015570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-24T21:49:30",
+            "timestamp_ms": 1764017370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-24T22:19:30",
+            "timestamp_ms": 1764019170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-24T22:49:30",
+            "timestamp_ms": 1764020970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-24T23:19:30",
+            "timestamp_ms": 1764022770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-24T23:49:30",
+            "timestamp_ms": 1764024570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-25T00:19:30",
+            "timestamp_ms": 1764026370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-25T00:49:30",
+            "timestamp_ms": 1764028170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-25T01:19:30",
+            "timestamp_ms": 1764029970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-25T01:49:30",
+            "timestamp_ms": 1764031770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-25T02:19:30",
+            "timestamp_ms": 1764033570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-25T02:49:30",
+            "timestamp_ms": 1764035370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-25T03:19:30",
+            "timestamp_ms": 1764037170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-25T03:49:30",
+            "timestamp_ms": 1764038970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-25T04:19:30",
+            "timestamp_ms": 1764040770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-25T04:49:30",
+            "timestamp_ms": 1764042570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-25T05:19:30",
+            "timestamp_ms": 1764044370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-25T05:49:30",
+            "timestamp_ms": 1764046170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-25T06:19:30",
+            "timestamp_ms": 1764047970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-25T06:49:30",
+            "timestamp_ms": 1764049770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-25T07:19:30",
+            "timestamp_ms": 1764051570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-25T07:49:30",
+            "timestamp_ms": 1764053370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-25T08:19:30",
+            "timestamp_ms": 1764055170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-25T08:49:30",
+            "timestamp_ms": 1764056970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-25T09:19:30",
+            "timestamp_ms": 1764058770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-25T09:49:30",
+            "timestamp_ms": 1764060570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-25T10:19:30",
+            "timestamp_ms": 1764062370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-25T10:49:30",
+            "timestamp_ms": 1764064170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-25T11:19:30",
+            "timestamp_ms": 1764065970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-25T11:49:30",
+            "timestamp_ms": 1764067770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-25T12:19:30",
+            "timestamp_ms": 1764069570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-25T12:49:30",
+            "timestamp_ms": 1764071370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-25T13:19:30",
+            "timestamp_ms": 1764073170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-25T13:49:30",
+            "timestamp_ms": 1764074970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-25T14:19:30",
+            "timestamp_ms": 1764076770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-25T14:49:30",
+            "timestamp_ms": 1764078570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-25T15:19:30",
+            "timestamp_ms": 1764080370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-25T15:49:30",
+            "timestamp_ms": 1764082170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-25T16:19:30",
+            "timestamp_ms": 1764083970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-25T16:49:30",
+            "timestamp_ms": 1764085770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-25T17:19:30",
+            "timestamp_ms": 1764087570000.0,
+            "value": 0.02,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-25T17:49:30",
+            "timestamp_ms": 1764089370000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-25T18:19:30",
+            "timestamp_ms": 1764091170000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-25T18:49:30",
+            "timestamp_ms": 1764092970000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-25T19:19:30",
+            "timestamp_ms": 1764094770000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-25T19:49:30",
+            "timestamp_ms": 1764096570000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-25T20:19:30",
+            "timestamp_ms": 1764098370000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-25T20:49:30",
+            "timestamp_ms": 1764100170000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-25T21:19:30",
+            "timestamp_ms": 1764101970000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-25T21:49:30",
+            "timestamp_ms": 1764103770000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-25T22:19:30",
+            "timestamp_ms": 1764105570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-25T22:49:30",
+            "timestamp_ms": 1764107370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-25T23:19:30",
+            "timestamp_ms": 1764109170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-25T23:49:30",
+            "timestamp_ms": 1764110970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-26T00:19:30",
+            "timestamp_ms": 1764112770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-26T00:49:30",
+            "timestamp_ms": 1764114570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-26T01:19:30",
+            "timestamp_ms": 1764116370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-26T01:49:30",
+            "timestamp_ms": 1764118170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-26T02:19:30",
+            "timestamp_ms": 1764119970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-26T02:49:30",
+            "timestamp_ms": 1764121770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-26T03:19:30",
+            "timestamp_ms": 1764123570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-26T03:49:30",
+            "timestamp_ms": 1764125370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-26T04:19:30",
+            "timestamp_ms": 1764127170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-26T04:49:30",
+            "timestamp_ms": 1764128970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-26T05:19:30",
+            "timestamp_ms": 1764130770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-26T05:49:30",
+            "timestamp_ms": 1764132570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-26T06:19:30",
+            "timestamp_ms": 1764134370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-26T06:49:30",
+            "timestamp_ms": 1764136170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-26T07:19:30",
+            "timestamp_ms": 1764137970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-26T07:49:30",
+            "timestamp_ms": 1764139770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-26T08:19:30",
+            "timestamp_ms": 1764141570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-26T08:49:30",
+            "timestamp_ms": 1764143370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-26T09:19:30",
+            "timestamp_ms": 1764145170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-26T09:49:30",
+            "timestamp_ms": 1764146970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-26T10:19:30",
+            "timestamp_ms": 1764148770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-26T10:49:30",
+            "timestamp_ms": 1764150570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-26T11:19:30",
+            "timestamp_ms": 1764152370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-26T11:49:30",
+            "timestamp_ms": 1764154170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-26T12:19:30",
+            "timestamp_ms": 1764155970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-26T12:49:30",
+            "timestamp_ms": 1764157770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-26T13:19:30",
+            "timestamp_ms": 1764159570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-26T13:49:30",
+            "timestamp_ms": 1764161370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-26T14:19:30",
+            "timestamp_ms": 1764163170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-26T14:49:30",
+            "timestamp_ms": 1764164970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-26T15:19:30",
+            "timestamp_ms": 1764166770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-26T15:49:30",
+            "timestamp_ms": 1764168570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-26T16:19:30",
+            "timestamp_ms": 1764170370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-26T16:49:30",
+            "timestamp_ms": 1764172170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-26T17:19:30",
+            "timestamp_ms": 1764173970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-26T17:49:30",
+            "timestamp_ms": 1764175770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-26T18:19:30",
+            "timestamp_ms": 1764177570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-26T18:49:30",
+            "timestamp_ms": 1764179370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-26T19:19:30",
+            "timestamp_ms": 1764181170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-26T19:49:30",
+            "timestamp_ms": 1764182970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-26T20:19:30",
+            "timestamp_ms": 1764184770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-26T20:49:30",
+            "timestamp_ms": 1764186570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-26T21:19:30",
+            "timestamp_ms": 1764188370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-26T21:49:30",
+            "timestamp_ms": 1764190170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-26T22:19:30",
+            "timestamp_ms": 1764191970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-26T22:49:30",
+            "timestamp_ms": 1764193770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-26T23:19:30",
+            "timestamp_ms": 1764195570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-26T23:49:30",
+            "timestamp_ms": 1764197370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-27T00:19:30",
+            "timestamp_ms": 1764199170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-27T00:49:30",
+            "timestamp_ms": 1764200970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-27T01:19:30",
+            "timestamp_ms": 1764202770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-27T01:49:30",
+            "timestamp_ms": 1764204570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-27T02:19:30",
+            "timestamp_ms": 1764206370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-27T02:49:30",
+            "timestamp_ms": 1764208170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-27T03:19:30",
+            "timestamp_ms": 1764209970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-27T03:49:30",
+            "timestamp_ms": 1764211770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-27T04:19:30",
+            "timestamp_ms": 1764213570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-27T04:49:30",
+            "timestamp_ms": 1764215370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-27T05:19:30",
+            "timestamp_ms": 1764217170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-27T05:49:30",
+            "timestamp_ms": 1764218970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-27T06:19:30",
+            "timestamp_ms": 1764220770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-27T06:49:30",
+            "timestamp_ms": 1764222570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-27T07:19:30",
+            "timestamp_ms": 1764224370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-27T07:49:30",
+            "timestamp_ms": 1764226170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-27T08:19:30",
+            "timestamp_ms": 1764227970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-27T08:49:30",
+            "timestamp_ms": 1764229770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-27T09:19:30",
+            "timestamp_ms": 1764231570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-27T09:49:30",
+            "timestamp_ms": 1764233370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-27T10:19:30",
+            "timestamp_ms": 1764235170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-27T10:49:30",
+            "timestamp_ms": 1764236970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-27T11:19:30",
+            "timestamp_ms": 1764238770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-27T11:49:30",
+            "timestamp_ms": 1764240570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-27T12:19:30",
+            "timestamp_ms": 1764242370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-27T12:49:30",
+            "timestamp_ms": 1764244170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-27T13:19:30",
+            "timestamp_ms": 1764245970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-27T13:49:30",
+            "timestamp_ms": 1764247770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-27T14:19:30",
+            "timestamp_ms": 1764249570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-27T14:49:30",
+            "timestamp_ms": 1764251370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-27T15:19:30",
+            "timestamp_ms": 1764253170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-27T15:49:30",
+            "timestamp_ms": 1764254970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-27T16:19:30",
+            "timestamp_ms": 1764256770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-27T16:49:30",
+            "timestamp_ms": 1764258570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-27T17:19:30",
+            "timestamp_ms": 1764260370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-27T17:49:30",
+            "timestamp_ms": 1764262170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-27T18:19:30",
+            "timestamp_ms": 1764263970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-27T18:49:30",
+            "timestamp_ms": 1764265770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-27T19:19:30",
+            "timestamp_ms": 1764267570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-27T19:49:30",
+            "timestamp_ms": 1764269370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-27T20:19:30",
+            "timestamp_ms": 1764271170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-27T20:49:30",
+            "timestamp_ms": 1764272970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-27T21:19:30",
+            "timestamp_ms": 1764274770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-27T21:49:30",
+            "timestamp_ms": 1764276570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-27T22:19:30",
+            "timestamp_ms": 1764278370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-27T22:49:30",
+            "timestamp_ms": 1764280170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-27T23:19:30",
+            "timestamp_ms": 1764281970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-27T23:49:30",
+            "timestamp_ms": 1764283770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-28T00:19:30",
+            "timestamp_ms": 1764285570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-28T00:49:30",
+            "timestamp_ms": 1764287370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-28T01:19:30",
+            "timestamp_ms": 1764289170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-28T01:49:30",
+            "timestamp_ms": 1764290970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-28T02:19:30",
+            "timestamp_ms": 1764292770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-28T02:49:30",
+            "timestamp_ms": 1764294570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-28T03:19:30",
+            "timestamp_ms": 1764296370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-28T03:49:30",
+            "timestamp_ms": 1764298170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-28T04:19:30",
+            "timestamp_ms": 1764299970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-28T04:49:30",
+            "timestamp_ms": 1764301770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-28T05:19:30",
+            "timestamp_ms": 1764303570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-28T05:49:30",
+            "timestamp_ms": 1764305370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-28T06:19:30",
+            "timestamp_ms": 1764307170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-28T06:49:30",
+            "timestamp_ms": 1764308970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-28T07:19:30",
+            "timestamp_ms": 1764310770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-28T07:49:30",
+            "timestamp_ms": 1764312570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-28T08:19:30",
+            "timestamp_ms": 1764314370000.0,
+            "value": 0.01,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-28T08:49:30",
+            "timestamp_ms": 1764316170000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-28T09:19:30",
+            "timestamp_ms": 1764317970000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-28T09:49:30",
+            "timestamp_ms": 1764319770000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-28T10:19:30",
+            "timestamp_ms": 1764321570000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-28T10:49:30",
+            "timestamp_ms": 1764323370000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-28T11:19:30",
+            "timestamp_ms": 1764325170000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-28T11:49:30",
+            "timestamp_ms": 1764326970000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-28T12:19:30",
+            "timestamp_ms": 1764328770000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-28T12:49:30",
+            "timestamp_ms": 1764330570000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-28T13:19:30",
+            "timestamp_ms": 1764332370000.0,
+            "value": 0.02,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-28T13:49:30",
+            "timestamp_ms": 1764334170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-28T14:19:30",
+            "timestamp_ms": 1764335970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-28T14:49:30",
+            "timestamp_ms": 1764337770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-28T15:19:30",
+            "timestamp_ms": 1764339570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-28T15:49:30",
+            "timestamp_ms": 1764341370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-28T16:19:30",
+            "timestamp_ms": 1764343170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-28T16:49:30",
+            "timestamp_ms": 1764344970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-28T17:19:30",
+            "timestamp_ms": 1764346770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-28T17:49:30",
+            "timestamp_ms": 1764348570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-28T18:19:30",
+            "timestamp_ms": 1764350370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-28T18:49:30",
+            "timestamp_ms": 1764352170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-28T19:19:30",
+            "timestamp_ms": 1764353970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-28T19:49:30",
+            "timestamp_ms": 1764355770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-28T20:19:30",
+            "timestamp_ms": 1764357570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-28T20:49:30",
+            "timestamp_ms": 1764359370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-28T21:19:30",
+            "timestamp_ms": 1764361170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-28T21:49:30",
+            "timestamp_ms": 1764362970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-28T22:19:30",
+            "timestamp_ms": 1764364770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-28T22:49:30",
+            "timestamp_ms": 1764366570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-28T23:19:30",
+            "timestamp_ms": 1764368370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-28T23:49:30",
+            "timestamp_ms": 1764370170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-29T00:19:30",
+            "timestamp_ms": 1764371970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-29T00:49:30",
+            "timestamp_ms": 1764373770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-29T01:19:30",
+            "timestamp_ms": 1764375570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-29T01:49:30",
+            "timestamp_ms": 1764377370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-29T02:19:30",
+            "timestamp_ms": 1764379170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-29T02:49:30",
+            "timestamp_ms": 1764380970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-29T03:19:30",
+            "timestamp_ms": 1764382770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-29T03:49:30",
+            "timestamp_ms": 1764384570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-29T04:19:30",
+            "timestamp_ms": 1764386370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-29T04:49:30",
+            "timestamp_ms": 1764388170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-29T05:19:30",
+            "timestamp_ms": 1764389970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-29T05:49:30",
+            "timestamp_ms": 1764391770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-29T06:19:30",
+            "timestamp_ms": 1764393570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-29T06:49:30",
+            "timestamp_ms": 1764395370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-29T07:19:30",
+            "timestamp_ms": 1764397170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-29T07:49:30",
+            "timestamp_ms": 1764398970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-29T08:19:30",
+            "timestamp_ms": 1764400770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-29T08:49:30",
+            "timestamp_ms": 1764402570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-29T09:19:30",
+            "timestamp_ms": 1764404370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-29T09:49:30",
+            "timestamp_ms": 1764406170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-29T10:19:30",
+            "timestamp_ms": 1764407970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-29T10:49:30",
+            "timestamp_ms": 1764409770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-29T11:19:30",
+            "timestamp_ms": 1764411570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-29T11:49:30",
+            "timestamp_ms": 1764413370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-29T12:19:30",
+            "timestamp_ms": 1764415170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-29T12:49:30",
+            "timestamp_ms": 1764416970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-29T13:19:30",
+            "timestamp_ms": 1764418770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-29T13:49:30",
+            "timestamp_ms": 1764420570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-29T14:19:30",
+            "timestamp_ms": 1764422370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-29T14:49:30",
+            "timestamp_ms": 1764424170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-29T15:19:30",
+            "timestamp_ms": 1764425970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-29T15:49:30",
+            "timestamp_ms": 1764427770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-29T16:19:30",
+            "timestamp_ms": 1764429570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-29T16:49:30",
+            "timestamp_ms": 1764431370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-29T17:19:30",
+            "timestamp_ms": 1764433170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-29T17:49:30",
+            "timestamp_ms": 1764434970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-29T18:19:30",
+            "timestamp_ms": 1764436770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-29T18:49:30",
+            "timestamp_ms": 1764438570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-29T19:19:30",
+            "timestamp_ms": 1764440370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-29T19:49:30",
+            "timestamp_ms": 1764442170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-29T20:19:30",
+            "timestamp_ms": 1764443970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-29T20:49:30",
+            "timestamp_ms": 1764445770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-29T21:19:30",
+            "timestamp_ms": 1764447570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-29T21:49:30",
+            "timestamp_ms": 1764449370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-29T22:19:30",
+            "timestamp_ms": 1764451170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-29T22:49:30",
+            "timestamp_ms": 1764452970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-29T23:19:30",
+            "timestamp_ms": 1764454770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-29T23:49:30",
+            "timestamp_ms": 1764456570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-30T00:19:30",
+            "timestamp_ms": 1764458370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-30T00:49:30",
+            "timestamp_ms": 1764460170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-30T01:19:30",
+            "timestamp_ms": 1764461970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-30T01:49:30",
+            "timestamp_ms": 1764463770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-30T02:19:30",
+            "timestamp_ms": 1764465570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-30T02:49:30",
+            "timestamp_ms": 1764467370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-30T03:19:30",
+            "timestamp_ms": 1764469170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-30T03:49:30",
+            "timestamp_ms": 1764470970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-30T04:19:30",
+            "timestamp_ms": 1764472770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-30T04:49:30",
+            "timestamp_ms": 1764474570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-30T05:19:30",
+            "timestamp_ms": 1764476370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-30T05:49:30",
+            "timestamp_ms": 1764478170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-30T06:19:30",
+            "timestamp_ms": 1764479970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-30T06:49:30",
+            "timestamp_ms": 1764481770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-30T07:19:30",
+            "timestamp_ms": 1764483570000.0,
+            "value": 0.01,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-30T07:49:30",
+            "timestamp_ms": 1764485370000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-30T08:19:30",
+            "timestamp_ms": 1764487170000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-30T08:49:30",
+            "timestamp_ms": 1764488970000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-30T09:19:30",
+            "timestamp_ms": 1764490770000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-30T09:49:30",
+            "timestamp_ms": 1764492570000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-30T10:19:30",
+            "timestamp_ms": 1764494370000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-30T10:49:30",
+            "timestamp_ms": 1764496170000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-30T11:19:30",
+            "timestamp_ms": 1764497970000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-30T11:49:30",
+            "timestamp_ms": 1764499770000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-30T12:19:30",
+            "timestamp_ms": 1764501570000.0,
+            "value": 0.03,
+            "status": "aan"
+          },
+          {
+            "timestamp": "2025-11-30T12:49:30",
+            "timestamp_ms": 1764503370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-30T13:19:30",
+            "timestamp_ms": 1764505170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-30T13:49:30",
+            "timestamp_ms": 1764506970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-30T14:19:30",
+            "timestamp_ms": 1764508770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-30T14:49:30",
+            "timestamp_ms": 1764510570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-30T15:19:30",
+            "timestamp_ms": 1764512370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-30T15:49:30",
+            "timestamp_ms": 1764514170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-30T16:19:30",
+            "timestamp_ms": 1764515970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-30T16:49:30",
+            "timestamp_ms": 1764517770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-30T17:19:30",
+            "timestamp_ms": 1764519570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-30T17:49:30",
+            "timestamp_ms": 1764521370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-30T18:19:30",
+            "timestamp_ms": 1764523170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-30T18:49:30",
+            "timestamp_ms": 1764524970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-30T19:19:30",
+            "timestamp_ms": 1764526770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-30T19:49:30",
+            "timestamp_ms": 1764528570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-30T20:19:30",
+            "timestamp_ms": 1764530370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-30T20:49:30",
+            "timestamp_ms": 1764532170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-30T21:19:30",
+            "timestamp_ms": 1764533970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-30T21:49:30",
+            "timestamp_ms": 1764535770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-30T22:19:30",
+            "timestamp_ms": 1764537570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-30T22:49:30",
+            "timestamp_ms": 1764539370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-30T23:19:30",
+            "timestamp_ms": 1764541170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-11-30T23:49:30",
+            "timestamp_ms": 1764542970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-01T00:19:30",
+            "timestamp_ms": 1764544770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-01T00:49:30",
+            "timestamp_ms": 1764546570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-01T01:19:30",
+            "timestamp_ms": 1764548370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-01T01:49:30",
+            "timestamp_ms": 1764550170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-01T02:19:30",
+            "timestamp_ms": 1764551970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-01T02:49:30",
+            "timestamp_ms": 1764553770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-01T03:19:30",
+            "timestamp_ms": 1764555570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-01T03:49:30",
+            "timestamp_ms": 1764557370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-01T04:19:30",
+            "timestamp_ms": 1764559170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-01T04:49:30",
+            "timestamp_ms": 1764560970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-01T05:19:30",
+            "timestamp_ms": 1764562770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-01T05:49:30",
+            "timestamp_ms": 1764564570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-01T06:19:30",
+            "timestamp_ms": 1764566370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-01T06:49:30",
+            "timestamp_ms": 1764568170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-01T07:19:30",
+            "timestamp_ms": 1764569970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-01T07:49:30",
+            "timestamp_ms": 1764571770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-01T08:19:30",
+            "timestamp_ms": 1764573570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-01T08:49:30",
+            "timestamp_ms": 1764575370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-01T09:19:30",
+            "timestamp_ms": 1764577170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-01T09:49:30",
+            "timestamp_ms": 1764578970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-01T10:19:30",
+            "timestamp_ms": 1764580770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-01T10:49:30",
+            "timestamp_ms": 1764582570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-01T11:19:30",
+            "timestamp_ms": 1764584370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-01T11:49:30",
+            "timestamp_ms": 1764586170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-01T12:19:30",
+            "timestamp_ms": 1764587970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-01T12:49:30",
+            "timestamp_ms": 1764589770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-01T13:19:30",
+            "timestamp_ms": 1764591570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-01T13:49:30",
+            "timestamp_ms": 1764593370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-01T14:19:30",
+            "timestamp_ms": 1764595170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-01T14:49:30",
+            "timestamp_ms": 1764596970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-01T15:19:30",
+            "timestamp_ms": 1764598770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-01T15:49:30",
+            "timestamp_ms": 1764600570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-01T16:19:30",
+            "timestamp_ms": 1764602370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-01T16:49:30",
+            "timestamp_ms": 1764604170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-01T17:19:30",
+            "timestamp_ms": 1764605970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-01T17:49:30",
+            "timestamp_ms": 1764607770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-01T18:19:30",
+            "timestamp_ms": 1764609570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-01T18:49:30",
+            "timestamp_ms": 1764611370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-01T19:19:30",
+            "timestamp_ms": 1764613170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-01T19:49:30",
+            "timestamp_ms": 1764614970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-01T20:19:30",
+            "timestamp_ms": 1764616770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-01T20:49:30",
+            "timestamp_ms": 1764618570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-01T21:19:30",
+            "timestamp_ms": 1764620370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-01T21:49:30",
+            "timestamp_ms": 1764622170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-01T22:19:30",
+            "timestamp_ms": 1764623970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-01T22:49:30",
+            "timestamp_ms": 1764625770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-01T23:19:30",
+            "timestamp_ms": 1764627570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-01T23:49:30",
+            "timestamp_ms": 1764629370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-02T00:19:30",
+            "timestamp_ms": 1764631170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-02T00:49:30",
+            "timestamp_ms": 1764632970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-02T01:19:30",
+            "timestamp_ms": 1764634770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-02T01:49:30",
+            "timestamp_ms": 1764636570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-02T02:19:30",
+            "timestamp_ms": 1764638370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-02T02:49:30",
+            "timestamp_ms": 1764640170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-02T03:19:30",
+            "timestamp_ms": 1764641970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-02T03:49:30",
+            "timestamp_ms": 1764643770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-02T04:19:30",
+            "timestamp_ms": 1764645570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-02T04:49:30",
+            "timestamp_ms": 1764647370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-02T05:19:30",
+            "timestamp_ms": 1764649170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-02T05:49:30",
+            "timestamp_ms": 1764650970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-02T06:19:30",
+            "timestamp_ms": 1764652770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-02T06:49:30",
+            "timestamp_ms": 1764654570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-02T07:19:30",
+            "timestamp_ms": 1764656370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-02T07:49:30",
+            "timestamp_ms": 1764658170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-02T08:19:30",
+            "timestamp_ms": 1764659970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-02T08:49:30",
+            "timestamp_ms": 1764661770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-02T09:19:30",
+            "timestamp_ms": 1764663570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-02T09:49:30",
+            "timestamp_ms": 1764665370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-02T10:19:30",
+            "timestamp_ms": 1764667170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-02T10:49:30",
+            "timestamp_ms": 1764668970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-02T11:19:30",
+            "timestamp_ms": 1764670770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-02T11:49:30",
+            "timestamp_ms": 1764672570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-02T12:19:30",
+            "timestamp_ms": 1764674370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-02T12:49:30",
+            "timestamp_ms": 1764676170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-02T13:19:30",
+            "timestamp_ms": 1764677970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-02T13:49:30",
+            "timestamp_ms": 1764679770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-02T14:19:30",
+            "timestamp_ms": 1764681570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-02T14:49:30",
+            "timestamp_ms": 1764683370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-02T15:19:30",
+            "timestamp_ms": 1764685170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-02T15:49:30",
+            "timestamp_ms": 1764686970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-02T16:19:30",
+            "timestamp_ms": 1764688770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-02T16:49:30",
+            "timestamp_ms": 1764690570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-02T17:19:30",
+            "timestamp_ms": 1764692370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-02T17:49:30",
+            "timestamp_ms": 1764694170000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-02T18:19:30",
+            "timestamp_ms": 1764695970000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-02T18:49:30",
+            "timestamp_ms": 1764697770000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-02T19:19:30",
+            "timestamp_ms": 1764699570000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-02T19:49:30",
+            "timestamp_ms": 1764701370000.0,
+            "value": 0.0,
+            "status": "uit"
+          },
+          {
+            "timestamp": "2025-12-02T20:19:30",
+            "timestamp_ms": 1764703170000.0,
+            "value": 0.0,
+            "status": "uit"
+          }
+        ]
+      }
+    ]
+  }
+}
