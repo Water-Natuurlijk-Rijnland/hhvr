@@ -36,7 +36,7 @@ export default defineConfig({
       }
     }
   ],
-  base: process.env.GITHUB_PAGES === 'true' ? '/hhvr/' : '/simulatie-peilbeheer/',
+  base: process.env.GITHUB_PAGES === 'true' ? '/' : '/simulatie-peilbeheer/',
   server: {
     fs: {
       allow: ['..']
