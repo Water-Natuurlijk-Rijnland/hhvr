@@ -1,0 +1,25 @@
+{
+  "name": "app-peilverordening",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run copy-kaartlagen && vite build",
+    "build:github": "GITHUB_PAGES=true npm run build",
+    "copy-kaartlagen": "node scripts/copy-kaartlagen.js",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.13",
+    "leaflet": "^1.9.4",
+    "proj4": "^2.20.2",
+    "proj4leaflet": "^1.0.2",
+    "tailwindcss": "^4.1.13",
+    "vue": "^3.5.18"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.1",
+    "vite": "^7.1.2"
+  }
+}
