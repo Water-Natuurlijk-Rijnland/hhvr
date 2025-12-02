@@ -35,57 +35,27 @@ jobs:
         working-directory: ./simulatie-peilbeheer
         run: npm ci
 
-      - name: Setup Python (voor kaartlagen download)
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-          cache: 'pip'
-
-      - name: Download kaartlagen (optioneel - alleen als script beschikbaar is)
-        working-directory: ./peilbesluiten
-        run: |
-          if [ -f "download_rijnland_layers.py" ] && [ -f "requirements.txt" ]; then
-            echo "Download script gevonden, installeren dependencies..."
-            pip install -r requirements.txt || true
-            echo "Downloaden kaartlagen (dit kan lang duren)..."
-            python3 download_rijnland_layers.py --resume || echo "Kaartlagen download gefaald, gebruik server fallback"
-          else
-            echo "Download script niet gevonden, gebruik server fallback voor kaartlagen"
-          fi
-        continue-on-error: true
-        timeout-minutes: 30
-
-      - name: Copy kaartlagen naar public folder
-        working-directory: ./simulatie-peilbeheer
-        run: |
-          if [ -d "../peilbesluiten/rijnland_kaartlagen" ]; then
-            echo "Kaartlagen gevonden, kopiëren naar public folder..."
-            node scripts/copy-kaartlagen.js || echo "Kaartlagen kopiëren gefaald, gebruik server fallback"
-          else
-            echo "Kaartlagen directory niet gevonden - gebruik server fallback"
-          fi
-        continue-on-error: true
-
       - name: Build
         working-directory: ./simulatie-peilbeheer
         env:
           GITHUB_PAGES: 'true'
         run: npm run build
 
-      - name: Copy dist to root voor branch deployment
-        run: |
-          # Kopieer build output naar root
-          cp -r simulatie-peilbeheer/dist/* . || true
-          # Maak .nojekyll bestand zodat GitHub Pages alle bestanden serveert
-          touch .nojekyll
-          echo "Build output gekopieerd naar root"
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
 
-      - name: Commit en push naar main (voor branch deployment)
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add .
-          git diff --staged --quiet || git commit -m "Deploy to GitHub Pages [skip ci]"
-          git push https://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@github.com/Water-Natuurlijk-Rijnland/hhvr.git main
-        continue-on-error: true
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './simulatie-peilbeheer/dist'
 
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
