@@ -72,29 +72,20 @@ jobs:
           GITHUB_PAGES: 'true'
         run: npm run build
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: './simulatie-peilbeheer/dist'
-          
-      # Als alternatief: kopieer dist naar root voor branch deployment
-      - name: Copy dist to root (voor branch deployment)
+      - name: Copy dist to root voor branch deployment
         run: |
+          # Kopieer build output naar root
           cp -r simulatie-peilbeheer/dist/* . || true
-          echo "Dist bestanden gekopieerd naar root"
-        continue-on-error: true
+          # Maak .nojekyll bestand zodat GitHub Pages alle bestanden serveert
+          touch .nojekyll
+          echo "Build output gekopieerd naar root"
 
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Commit en push naar main (voor branch deployment)
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git diff --staged --quiet || git commit -m "Deploy to GitHub Pages [skip ci]"
+          git push https://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@github.com/Water-Natuurlijk-Rijnland/hhvr.git main
+        continue-on-error: true
 
