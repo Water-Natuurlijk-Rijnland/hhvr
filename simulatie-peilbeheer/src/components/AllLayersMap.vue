@@ -486,14 +486,13 @@ const getLocalLayerUrl = (layerName) => {
   return `${basePath}/peilbesluiten/rijnland_kaartlagen/${mapping.dir}/${mapping.file}`
 }
 
-// URL mapping voor lagen - gebruik lokale bestanden waar beschikbaar
-const layerUrls = {
-  // Peilgebieden - worden geladen via getLocalLayerUrl (lokaal eerst, dan server fallback)
-  peilgebieden: null, // Wordt via getLocalLayerUrl geladen
-  peilgebied_praktijk: null, // Wordt via getLocalLayerUrl geladen
-  peilenkaart_praktijk: null, // Wordt via getLocalLayerUrl geladen
-  peilafwijking_praktijk: null, // Wordt via getLocalLayerUrl geladen
-  peilafwijking_vigerend: null, // Wordt via getLocalLayerUrl geladen
+// Server URLs voor alle lagen (fallback als lokale bestanden niet beschikbaar zijn)
+const serverUrls = {
+  peilgebieden: 'https://rijnland.enl-mcs.nl/arcgis/rest/services/Peilgebied_vigerend_besluit/MapServer/0/query?where=1%3D1&outFields=*&f=geojson',
+  peilgebied_praktijk: 'https://rijnland.enl-mcs.nl/arcgis/rest/services/Peilgebied_praktijk_soort_gebied/MapServer/0/query?where=1%3D1&outFields=*&f=geojson',
+  peilenkaart_praktijk: 'https://rijnland.enl-mcs.nl/arcgis/rest/services/Peilenkaart_praktijk/MapServer/0/query?where=1%3D1&outFields=*&f=geojson',
+  peilafwijking_praktijk: 'https://rijnland.enl-mcs.nl/arcgis/rest/services/Peilafwijking_praktijk/MapServer/0/query?where=1%3D1&outFields=*&f=geojson',
+  peilafwijking_vigerend: 'https://rijnland.enl-mcs.nl/arcgis/rest/services/Peilafwijking_vigerend_besluit/MapServer/0/query?where=1%3D1&outFields=*&f=geojson',
   gemalen: getLocalLayerUrl('gemalen') || 'https://rijnland.enl-mcs.nl/arcgis/rest/services/Gemaal/MapServer/0/query?where=1%3D1&outFields=*&f=geojson',
   gemaal_opgrootte: getLocalLayerUrl('gemaal_opgrootte') || 'https://rijnland.enl-mcs.nl/arcgis/rest/services/Gemaal_opgrootte/MapServer/0/query?where=1%3D1&outFields=*&f=geojson',
   effluentgemaal: getLocalLayerUrl('effluentgemaal') || 'https://rijnland.enl-mcs.nl/arcgis/rest/services/Effluentgemaal/MapServer/0/query?where=1%3D1&outFields=*&f=geojson',
@@ -852,7 +851,7 @@ const loadLayer = async (layerName, config) => {
     
     // ALTIJD eerst lokale bestand proberen
     const localUrl = getLocalLayerUrl(layerName)
-    const serverUrl = layerUrls[layerName]
+    const serverUrl = layerUrls[layerName] || serverUrls[layerName]
     
     // Probeer eerst lokale bestand
     if (localUrl) {
@@ -863,33 +862,36 @@ const loadLayer = async (layerName, config) => {
           const data = await response.json()
           const geojsonData = convertToGeoJSON(data, layerName)
           processLayerData(layerName, config, geojsonData)
+          loading.value = false
           return
         } else {
-          console.warn(`Lokaal bestand niet beschikbaar (${response.status}) voor ${layerName}`)
+          console.warn(`Lokaal bestand niet beschikbaar (${response.status}) voor ${layerName}, probeer server...`)
         }
       } catch (e) {
-        console.warn(`Fout bij laden lokaal bestand voor ${layerName}:`, e)
+        console.warn(`Fout bij laden lokaal bestand voor ${layerName}:`, e.message, '- probeer server...')
       }
     }
     
-    // Fallback naar server URL alleen als lokaal bestand niet beschikbaar is EN server URL niet lokaal is
-    if (serverUrl && !serverUrl.includes('/peilbesluiten/') && !serverUrl.includes('/data/')) {
-      console.log(`Laden van ${layerName} vanaf server: ${serverUrl}`)
+    // Fallback naar server URL als lokaal bestand niet beschikbaar is
+    const fallbackUrl = serverUrl
+    if (fallbackUrl && !fallbackUrl.includes('/peilbesluiten/') && !fallbackUrl.includes('/data/')) {
+      console.log(`Laden van ${layerName} vanaf server: ${fallbackUrl}`)
       try {
-        const response = await fetch(serverUrl)
+        const response = await fetch(fallbackUrl)
         if (response.ok) {
           const data = await response.json()
           const geojsonData = convertToGeoJSON(data, layerName)
           processLayerData(layerName, config, geojsonData)
+          loading.value = false
           return
         } else {
-          console.error(`Server URL ook niet beschikbaar voor ${layerName}: ${response.status}`)
+          console.error(`HTTP error voor ${layerName}: ${response.status} - ${response.statusText}`)
         }
       } catch (e) {
-        console.error(`Fout bij laden server URL voor ${layerName}:`, e)
+        console.error(`Fout bij laden vanaf server voor ${layerName}:`, e.message)
       }
-    } else if (!localUrl) {
-      console.error(`Geen beschikbare URL voor ${layerName}`)
+    } else if (!localUrl && !fallbackUrl) {
+      console.error(`Geen beschikbare URL voor ${layerName} (noch lokaal, noch server)`)
     }
 
   } catch (error) {
