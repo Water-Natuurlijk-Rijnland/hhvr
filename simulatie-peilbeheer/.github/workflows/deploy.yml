@@ -79,6 +79,13 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: './simulatie-peilbeheer/dist'
+          
+      # Als alternatief: kopieer dist naar root voor branch deployment
+      - name: Copy dist to root (voor branch deployment)
+        run: |
+          cp -r simulatie-peilbeheer/dist/* . || true
+          echo "Dist bestanden gekopieerd naar root"
+        continue-on-error: true
 
   deploy:
     environment:
