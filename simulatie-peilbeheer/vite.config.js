@@ -36,9 +36,8 @@ export default defineConfig({
       }
     }
   ],
-  // Voor GitHub Pages: als "deploy from branch root" is ingesteld, gebruik /
-  // Als GitHub Actions deployment wordt gebruikt, gebruik /hhvr/
-  base: process.env.GITHUB_PAGES === 'true' ? '/' : '/simulatie-peilbeheer/',
+  // Voor GitHub Pages deployment
+  base: process.env.GITHUB_PAGES === 'true' ? '/hhvr/' : '/simulatie-peilbeheer/',
   server: {
     fs: {
       allow: ['..']
