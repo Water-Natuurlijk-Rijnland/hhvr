@@ -1,0 +1,51 @@
+# Mac OS
+.DS_Store
+
+# Distribution / Build
+dist/
+build/
+
+# Large map layers (GeoJSON files)
+*.geojson
+
+# Shapefile formats
+*.shp
+*.shx
+*.dbf
+*.prj
+*.cpg
+
+# GeoPackage
+*.gpkg
+
+# Raster data
+*.tif
+*.tiff
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+pip-log.txt
+pip-delete-this-directory.txt
+.pytest_cache/
+*.egg-info/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+
+# Node modules (if any)
+node_modules/
