@@ -1,0 +1,26 @@
+{
+    "generated_at": "2025-12-11T12:00:00.000000",
+    "total_stations": 120,
+    "active_stations": 42,
+    "total_debiet_m3s": 15.6,
+    "stations": {
+        "176-036-00021": {
+            "status": "aan",
+            "debiet": 0.44,
+            "timestamp": "2025-12-11T11:50:00",
+            "last_update": "2025-12-11T11:50:00"
+        },
+        "176-036-00022": {
+            "status": "uit",
+            "debiet": 0.0,
+            "timestamp": "2025-12-11T11:55:00",
+            "last_update": "2025-12-11T11:55:00"
+        },
+        "WNS2367": {
+            "status": "aan",
+            "debiet": 1.25,
+            "timestamp": "2025-12-11T11:40:00",
+            "last_update": "2025-12-11T11:40:00"
+        }
+    }
+}

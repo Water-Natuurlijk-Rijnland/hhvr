@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.13",
+    "chart.js": "^4.5.1",
     "leaflet": "^1.9.4",
     "proj4": "^2.20.2",
     "proj4leaflet": "^1.0.2",

@@ -117,7 +117,15 @@ Voor real-time sensor data (waterstanden, debieten) moet mogelijk contact worden
 
 ## 6. Data Updates
 
-### Update Frequenties (geschat)
+### Update Frequenties
+
+#### Hydronet Water Control Room API (Gemaal data)
+- **Update interval: 30 minuten**
+- Nieuwe datapunten verschijnen op :19 en :49 minuten van elk uur
+- Aanbevolen polling: elke 15-30 minuten
+- Vaker pollen is niet zinvol (data verandert niet)
+
+#### ArcGIS Services (geschat)
 - **Peilenkaart_praktijk**: Dagelijks/wekelijks
 - **Meetlocaties**: Real-time tot dagelijks (afhankelijk van sensor)
 - **Peilafwijkingen**: Regelmatig bijgewerkt
@@ -167,4 +175,6 @@ const meetlocaties = await fetch(
 Voor vragen over dynamische data of toegang tot real-time APIs:
 - **Website**: https://www.rijnland.net
 - **Contact**: Via het loket op de website
+
+
 

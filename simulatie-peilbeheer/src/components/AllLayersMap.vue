@@ -101,6 +101,14 @@
         <span class="text-sm font-semibold text-gray-700">Laden...</span>
       </div>
     </div>
+
+    <!-- Gemaal Grafiek Component -->
+    <GemaalChart 
+      v-if="showChart && selectedGemaal" 
+      :gemaal-code="selectedGemaal.code"
+      :gemaal-naam="selectedGemaal.naam"
+      @close="showChart = false; selectedGemaal = null" 
+    />
   </div>
 </template>
 
@@ -138,6 +146,7 @@
 import { ref, onMounted, reactive, computed } from 'vue'
 import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
+import GemaalChart from './GemaalChart.vue'
 
 const map = ref(null)
 const selectedFeature = ref(null)
@@ -145,6 +154,10 @@ const loading = ref(false)
 const legendExpanded = ref(true)
 const gemaalRealtimeData = ref({}) // Cache voor real-time gemaal data
 const hoveredGemaal = ref(null)
+const gemaalStatus = ref(null) // Global status for all gemalen
+const showChart = ref(false) // Toon/verberg grafiek component
+const selectedGemaal = ref(null) // Geselecteerd gemaal voor grafiek
+const gemalenMetData = ref(new Set()) // Set van gemaal codes die data hebben
 
 // Hydronet API configuratie
 const HYDRONET_CHART_ID = 'e743fb87-2a02-4f3e-ac6c-03d03401aab8'
@@ -619,12 +632,66 @@ const formatKey = (key) => {
   return keyMap[key] || key.charAt(0).toUpperCase() + key.slice(1).toLowerCase()
 }
 
-const createPointIcon = (emoji) => {
+const createPointIcon = (emoji, status = null, isGemaal = false, gemaalCode = null) => {
+  // Voor gemalen: gebruik SVG icoon
+  if (isGemaal) {
+    // Check of dit gemaal data heeft
+    const heeftData = gemaalCode && gemalenMetData.value.has(gemaalCode)
+    
+    let backgroundColor = 'transparent'
+    let borderColor = 'transparent'
+    let borderWidth = '0px'
+    let iconFilter = ''
+    
+    if (heeftData) {
+      // Groen voor gemalen met data beschikbaar
+      backgroundColor = 'rgba(16, 185, 129, 0.3)' // Green background
+      borderColor = '#10b981'
+      borderWidth = '3px'
+      // Maak het icoon groen met CSS filter
+      iconFilter = 'brightness(0) saturate(100%) invert(48%) sepia(79%) saturate(2476%) hue-rotate(130deg) brightness(95%) contrast(86%)'
+    } else if (status === 'aan') {
+      backgroundColor = 'rgba(16, 185, 129, 0.2)' // Green-ish background
+      borderColor = '#10b981'
+      borderWidth = '2px'
+    } else if (status === 'uit') {
+      backgroundColor = 'rgba(107, 114, 128, 0.1)' // Gray-ish
+      borderColor = '#9ca3af'
+      borderWidth = '2px'
+    }
+    const style = heeftData || status
+      ? `background-color: ${backgroundColor}; border: ${borderWidth} solid ${borderColor}; border-radius: 50%; width: 46px; height: 46px; display: flex; align-items: center; justify-content: center; box-shadow: ${heeftData ? '0 0 8px rgba(16, 185, 129, 0.5)' : 'none'};` 
+      : 'width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;'
+
+    return L.divIcon({
+      html: `<div style="${style}"><img src="${import.meta.env.BASE_URL}gemaal-icon.svg" alt="Gemaal" style="width: 40px; height: 40px; ${iconFilter ? `filter: ${iconFilter};` : ''}" /></div>`,
+      className: 'custom-icon gemaal-icon',
+      iconSize: [46, 46],
+      iconAnchor: [23, 23]
+    })
+  }
+
+  // Voor andere punten: gebruik emoji
+  let backgroundColor = 'transparent'
+  let borderColor = 'transparent'
+  
+  if (status === 'aan') {
+    backgroundColor = 'rgba(16, 185, 129, 0.2)' // Green-ish background
+    borderColor = '#10b981'
+  } else if (status === 'uit') {
+    backgroundColor = 'rgba(107, 114, 128, 0.1)' // Gray-ish
+    borderColor = '#9ca3af'
+  }
+
+  const style = status 
+    ? `background-color: ${backgroundColor}; border: 2px solid ${borderColor}; border-radius: 50%; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;` 
+    : ''
+
   return L.divIcon({
-    html: `<div style="font-size: 24px;">${emoji}</div>`,
+    html: `<div style="font-size: 24px; ${style}">${emoji}</div>`,
     className: 'custom-icon',
-    iconSize: [30, 30],
-    iconAnchor: [15, 15]
+    iconSize: [40, 40],
+    iconAnchor: [20, 20]
   })
 }
 
@@ -760,22 +827,23 @@ const processLayerData = (layerName, config, geojsonData) => {
   const geoJsonOptions = {
     onEachFeature: (feature, layer) => {
       layer.on('click', () => {
-        selectedFeature.value = {
-          title: feature.properties.NAAM || feature.properties.CODE || feature.properties.Name || 'Onbekend',
-          type: layerName,
-          properties: feature.properties
+        // Voor gemalen: toon grafiek bij klik
+        if (layerName === 'gemalen') {
+          const code = feature.properties.CODE
+          const naam = feature.properties.NAAM || code || 'Onbekend'
+          if (code) {
+            selectedGemaal.value = { code, naam }
+            showChart.value = true
+          }
+        } else {
+          // Voor andere lagen: toon normale info panel
+          selectedFeature.value = {
+            title: feature.properties.NAAM || feature.properties.CODE || feature.properties.Name || 'Onbekend',
+            type: layerName,
+            properties: feature.properties
+          }
         }
       })
-      
-      // Voor gemalen: voeg hover events toe voor real-time data
-      if (layerName === 'gemalen' && layer instanceof L.Marker) {
-        layer.on('mouseover', async () => {
-          await showGemaalRealtimeData(feature, layer)
-        })
-        layer.on('mouseout', () => {
-          hideGemaalTooltip(layer)
-        })
-      }
       
       // Voor peilgebieden: toon zomer- en winterpeil bij hover
       if ((layerName === 'peilgebieden' || layerName === 'peilgebied_praktijk' || 
@@ -805,7 +873,21 @@ const processLayerData = (layerName, config, geojsonData) => {
 
   if (geometryType === 'Point') {
     geoJsonOptions.pointToLayer = (feature, latlng) => {
-      return L.marker(latlng, { icon: createPointIcon(config.icon) })
+      let icon = config.icon
+      let status = null
+      
+      // Speciale handling voor gemalen status
+      if (layerName === 'gemalen' && gemaalStatus.value) {
+        const code = feature.properties.CODE
+        if (code && gemaalStatus.value.stations && gemaalStatus.value.stations[code]) {
+          const stationStatus = gemaalStatus.value.stations[code]
+          status = stationStatus.status
+        }
+      }
+      
+      const isGemaal = layerName === 'gemalen' || layerName === 'gemaal_opgrootte' || layerName === 'effluentgemaal' || layerName === 'rioolgemaal'
+      const code = feature.properties.CODE
+      return L.marker(latlng, { icon: createPointIcon(config.icon, status, isGemaal, code) })
     }
   } else if (geometryType === 'Polygon' || geometryType === 'MultiPolygon') {
     geoJsonOptions.style = {
@@ -838,6 +920,14 @@ const processLayerData = (layerName, config, geojsonData) => {
         }
       }
     }
+    
+    // Update iconen voor gemalen laag als de lijst al beschikbaar is
+    if (layerName === 'gemalen' && gemalenMetData.value.size > 0) {
+      // Wacht even zodat de laag volledig is geladen
+      setTimeout(() => {
+        updateGemaalIconen()
+      }, 100)
+    }
   } catch (error) {
     console.error(`Fout bij aanmaken layer voor ${layerName}:`, error)
   }
@@ -851,7 +941,7 @@ const loadLayer = async (layerName, config) => {
     
     // ALTIJD eerst lokale bestand proberen
     const localUrl = getLocalLayerUrl(layerName)
-    const serverUrl = layerUrls[layerName] || serverUrls[layerName]
+    const serverUrl = serverUrls[layerName]
     
     // Probeer eerst lokale bestand
     if (localUrl) {
@@ -904,15 +994,40 @@ const loadLayer = async (layerName, config) => {
 const toggleLayer = async (layerName) => {
   const config = layers[layerName]
 
-  if (!config.layer) {
-    await loadLayer(layerName, config)
+  // Als de laag nog niet geladen is en visible is true, laad de laag
+  if (!config.layer && config.visible) {
+    loading.value = true
+    try {
+      await loadLayer(layerName, config)
+    } catch (error) {
+      console.error(`Fout bij laden van laag ${layerName}:`, error)
+      // Reset visibility bij error
+      config.visible = false
+      loading.value = false
+      return
+    }
+    loading.value = false
   }
 
+  // Voeg toe aan of verwijder van kaart op basis van visibility
   if (config.layer) {
     if (config.visible) {
-      config.layer.addTo(map.value)
+      // Alleen toevoegen als de laag niet al op de kaart staat
+      if (!map.value.hasLayer(config.layer)) {
+        config.layer.addTo(map.value)
+      }
+      
+      // Update iconen voor gemalen laag als de lijst beschikbaar is
+      if (layerName === 'gemalen' && gemalenMetData.value.size > 0) {
+        setTimeout(() => {
+          updateGemaalIconen()
+        }, 100)
+      }
     } else {
-      map.value.removeLayer(config.layer)
+      // Verwijder van kaart als deze erop staat
+      if (map.value.hasLayer(config.layer)) {
+        map.value.removeLayer(config.layer)
+      }
     }
   }
 }
@@ -1144,8 +1259,98 @@ const loadInitialLayers = async () => {
   // Dit voorkomt dat alle lagen direct worden geladen bij het openen
 }
 
+const fetchGemaalStatus = async () => {
+  try {
+    const response = await fetch('./data/gemaal_status_latest.json')
+    if (response.ok) {
+      const data = await response.json()
+      gemaalStatus.value = data
+      console.log('Global gemaal status loaded:', data.active_stations, 'active stations')
+      
+      // Update gemalen met data lijst als die al geladen is
+      if (gemalenMetData.value.size > 0) {
+        const statusGemalen = Object.keys(data.stations || {})
+        statusGemalen.forEach(code => {
+          gemalenMetData.value.add(code)
+        })
+        console.log(`Gemalen met data uitgebreid met status data: ${gemalenMetData.value.size} totaal`)
+        
+        // Update iconen als laag al geladen is
+        if (layers.gemalen.layer) {
+          updateGemaalIconen()
+        }
+      }
+    }
+  } catch (e) {
+    console.warn('Could not load global gemaal status:', e)
+  }
+}
+
+// Laad lijst van gemalen met beschikbare data
+const loadGemalenMetData = async () => {
+  try {
+    // Haal lijst op via proxy endpoint die de directory leest
+    const response = await fetch('/api/gemalen-met-data')
+    if (response.ok) {
+      const data = await response.json()
+      gemalenMetData.value = new Set(data.gemalen || [])
+      console.log(`Gemalen met opgeslagen data: ${gemalenMetData.value.size} gemalen`)
+      
+      // Voeg ook gemalen toe uit gemaal_status_latest.json (hebben ook data via API)
+      if (gemaalStatus.value && gemaalStatus.value.stations) {
+        const statusGemalen = Object.keys(gemaalStatus.value.stations)
+        statusGemalen.forEach(code => {
+          gemalenMetData.value.add(code)
+        })
+        console.log(`Totaal gemalen met data (opgeslagen + status): ${gemalenMetData.value.size} gemalen`)
+      }
+      
+      // Update iconen voor gemalen laag als deze al geladen is
+      if (layers.gemalen.layer) {
+        updateGemaalIconen()
+      }
+    }
+  } catch (e) {
+    console.warn('Kon lijst van gemalen met data niet laden:', e)
+    // Fallback: gebruik alleen gemaalStatus als die beschikbaar is
+    if (gemaalStatus.value && gemaalStatus.value.stations) {
+      gemalenMetData.value = new Set(Object.keys(gemaalStatus.value.stations))
+      if (layers.gemalen.layer) {
+        updateGemaalIconen()
+      }
+    }
+  }
+}
+
+// Update iconen voor alle gemalen op de kaart
+const updateGemaalIconen = () => {
+  if (!layers.gemalen.layer) {
+    console.log('Gemaal laag niet geladen, kan iconen niet updaten')
+    return
+  }
+  
+  let updated = 0
+  layers.gemalen.layer.eachLayer((layer) => {
+    if (layer instanceof L.Marker) {
+      const feature = layer.feature
+      if (feature && feature.properties) {
+        const code = feature.properties.CODE
+        const status = gemaalStatus.value?.stations?.[code]?.status || null
+        const isGemaal = true
+        const heeftData = code && gemalenMetData.value.has(code)
+        const newIcon = createPointIcon('🏭', status, isGemaal, code)
+        layer.setIcon(newIcon)
+        if (heeftData) updated++
+      }
+    }
+  })
+  console.log(`Gemaal iconen geüpdatet: ${updated} gemalen met data gemarkeerd`)
+}
+
 onMounted(async () => {
   initMap()
+  await fetchGemaalStatus()
+  await loadGemalenMetData()
   await loadInitialLayers()
 })
 </script>
