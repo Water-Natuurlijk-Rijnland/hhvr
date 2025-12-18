@@ -91,6 +91,74 @@
           <p class="text-xs font-semibold text-gray-500 uppercase">{{ formatKey(key) }}</p>
           <p class="text-sm text-gray-800">{{ value }}</p>
         </div>
+        
+        <!-- Gemaal Trend Information -->
+        <div v-if="selectedFeature.type === 'gemalen' && selectedGemaalTrends" class="mt-4 pt-4 border-t border-gray-200">
+          <h4 class="text-sm font-bold text-gray-700 mb-3">📈 Trend Analyse</h4>
+          
+          <div class="space-y-3">
+            <!-- Current Status -->
+            <div v-if="selectedGemaalStatus" class="bg-gray-50 rounded-lg p-3">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-semibold text-gray-600">Huidige Status</span>
+                <span 
+                  class="text-xs font-bold px-2 py-1 rounded"
+                  :class="selectedGemaalStatus.status === 'aan' ? 'bg-green-100 text-green-700' : 'bg-gray-100 text-gray-600'"
+                >
+                  {{ selectedGemaalStatus.status.toUpperCase() }}
+                </span>
+              </div>
+              <p class="text-lg font-bold text-gray-800">
+                {{ selectedGemaalStatus.debiet?.toFixed(3) || '0.000' }} <span class="text-sm font-normal text-gray-500">m³/s</span>
+              </p>
+            </div>
+            
+            <!-- Trends per Window -->
+            <div v-if="selectedGemaalTrends.trends" class="space-y-2">
+              <div 
+                v-for="(trend, windowKey) in selectedGemaalTrends.trends" 
+                :key="windowKey"
+                v-if="trend"
+                class="bg-gray-50 rounded-lg p-2"
+              >
+                <div class="flex items-center justify-between mb-1">
+                  <span class="text-xs font-semibold text-gray-600">{{ getWindowLabel(windowKey) }}</span>
+                  <span 
+                    class="text-xs font-medium"
+                    :class="getTrendColorClass(trend.direction)"
+                  >
+                    {{ getTrendLabel(trend.direction) }} ({{ trend.strength }})
+                  </span>
+                </div>
+                <div class="flex items-center gap-2 text-xs text-gray-600">
+                  <span>↗</span>
+                  <span>{{ trend.slope_per_hour?.toFixed(3) || '0.000' }} m³/s/uur</span>
+                  <span class="text-gray-400">•</span>
+                  <span>R²: {{ (trend.r_squared * 100).toFixed(0) }}%</span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Window Stats -->
+            <div v-if="selectedGemaalTrends.window_stats" class="space-y-2">
+              <p class="text-xs font-semibold text-gray-600 mb-2">Statistieken</p>
+              <div 
+                v-for="(stats, windowKey) in selectedGemaalTrends.window_stats" 
+                :key="windowKey"
+                v-if="stats"
+                class="text-xs text-gray-600 bg-gray-50 rounded p-2"
+              >
+                <div class="font-semibold mb-1">{{ getWindowLabel(windowKey) }}</div>
+                <div class="grid grid-cols-2 gap-1">
+                  <span>Gemiddeld: <strong>{{ stats.avg?.toFixed(3) || '0.000' }}</strong></span>
+                  <span>Min-Max: <strong>{{ stats.min?.toFixed(3) || '0.000' }}</strong> - <strong>{{ stats.max?.toFixed(3) || '0.000' }}</strong></span>
+                  <span>Punten: <strong>{{ stats.count || 0 }}</strong></span>
+                  <span>Duur: <strong>{{ stats.window_duration_minutes?.toFixed(0) || 0 }} min</strong></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -1034,6 +1102,60 @@ const toggleLayer = async (layerName) => {
 
 const closeInfo = () => {
   selectedFeature.value = null
+}
+
+// Get gemaal trend data for selected feature
+const selectedGemaalTrends = computed(() => {
+  if (!selectedFeature.value || selectedFeature.value.type !== 'gemalen') return null
+  if (!gemaalStatus.value?.stations) return null
+  
+  const gemaalCode = selectedFeature.value.properties?.CODE
+  if (!gemaalCode) return null
+  
+  const stationData = gemaalStatus.value.stations[gemaalCode]
+  if (!stationData) return null
+  
+  return {
+    trends: stationData.trends || null,
+    window_stats: stationData.window_stats || null,
+    summary: stationData.summary || null
+  }
+})
+
+// Get gemaal status for selected feature
+const selectedGemaalStatus = computed(() => {
+  if (!selectedFeature.value || selectedFeature.value.type !== 'gemalen') return null
+  if (!gemaalStatus.value?.stations) return null
+  
+  const gemaalCode = selectedFeature.value.properties?.CODE
+  if (!gemaalCode) return null
+  
+  return gemaalStatus.value.stations[gemaalCode] || null
+})
+
+// Helper functions for trend display
+const getWindowLabel = (windowKey) => {
+  const labels = {
+    '30_min': '30 minuten',
+    '60_min': '1 uur',
+    '180_min': '3 uur'
+  }
+  return labels[windowKey] || windowKey
+}
+
+const getTrendLabel = (direction) => {
+  const labels = {
+    'increasing': 'Stijgend',
+    'decreasing': 'Dalend',
+    'stable': 'Stabiel'
+  }
+  return labels[direction] || direction
+}
+
+const getTrendColorClass = (direction) => {
+  if (direction === 'increasing') return 'text-green-600'
+  if (direction === 'decreasing') return 'text-red-600'
+  return 'text-gray-600'
 }
 
 // Parse Highcharts configuratie uit HTML

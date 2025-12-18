@@ -1,0 +1,118 @@
+{
+  "gemaal_code": "176-036-00021",
+  "current_value": 0.0,
+  "current_timestamp": "2025-12-18T12:19:43",
+  "windows": {
+    "30_min": {
+      "data_points_count": 2,
+      "window_minutes": 30,
+      "has_sufficient_data": true,
+      "stats": {
+        "count": 2,
+        "min": 0.0,
+        "max": 0.4,
+        "avg": 0.2,
+        "sum": 0.4,
+        "first_value": 0.4,
+        "last_value": 0.0,
+        "window_start": "2025-12-18T11:49:43",
+        "window_end": "2025-12-18T12:19:43",
+        "window_duration_minutes": 30.0
+      },
+      "min_debiet": 0.0,
+      "max_debiet": 0.4,
+      "avg_debiet": 0.2,
+      "total_debiet": 0.4,
+      "trend": {
+        "slope": -0.000222,
+        "slope_per_hour": -0.8,
+        "direction": "stable",
+        "r_squared": 1.0,
+        "strength": "weak"
+      },
+      "trend_direction": "stable",
+      "trend_strength": "weak",
+      "change_percentage": -100.0
+    },
+    "60_min": {
+      "data_points_count": 3,
+      "window_minutes": 60,
+      "has_sufficient_data": true,
+      "stats": {
+        "count": 3,
+        "min": 0.0,
+        "max": 0.4,
+        "avg": 0.26666666666666666,
+        "sum": 0.8,
+        "first_value": 0.4,
+        "last_value": 0.0,
+        "window_start": "2025-12-18T11:19:43",
+        "window_end": "2025-12-18T12:19:43",
+        "window_duration_minutes": 60.0
+      },
+      "min_debiet": 0.0,
+      "max_debiet": 0.4,
+      "avg_debiet": 0.267,
+      "total_debiet": 0.8,
+      "trend": {
+        "slope": -0.000111,
+        "slope_per_hour": -0.4,
+        "direction": "stable",
+        "r_squared": 0.75,
+        "strength": "weak"
+      },
+      "trend_direction": "stable",
+      "trend_strength": "weak",
+      "change_percentage": -100.0
+    },
+    "180_min": {
+      "data_points_count": 7,
+      "window_minutes": 180,
+      "has_sufficient_data": true,
+      "stats": {
+        "count": 7,
+        "min": 0.0,
+        "max": 0.4,
+        "avg": 0.15242857142857144,
+        "sum": 1.0670000000000002,
+        "first_value": 0.0,
+        "last_value": 0.0,
+        "window_start": "2025-12-18T09:19:43",
+        "window_end": "2025-12-18T12:19:43",
+        "window_duration_minutes": 180.0
+      },
+      "min_debiet": 0.0,
+      "max_debiet": 0.4,
+      "avg_debiet": 0.152,
+      "total_debiet": 1.067,
+      "trend": {
+        "slope": 2.4e-05,
+        "slope_per_hour": 0.086,
+        "direction": "stable",
+        "r_squared": 0.225,
+        "strength": "weak"
+      },
+      "trend_direction": "stable",
+      "trend_strength": "weak"
+    }
+  },
+  "summary": {
+    "short_term_trend": {
+      "slope": -0.000222,
+      "slope_per_hour": -0.8,
+      "direction": "stable",
+      "r_squared": 1.0,
+      "strength": "weak"
+    },
+    "medium_term_trend": {
+      "slope": 2.4e-05,
+      "slope_per_hour": 0.086,
+      "direction": "stable",
+      "r_squared": 0.225,
+      "strength": "weak"
+    },
+    "long_term_trend": null,
+    "overall_status": "stable"
+  },
+  "processed_at": "2025-12-18T17:48:43.831664"
+}
