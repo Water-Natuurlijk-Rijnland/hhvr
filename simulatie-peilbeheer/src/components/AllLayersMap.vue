@@ -1415,12 +1415,90 @@ const hideGemaalTooltip = (marker) => {
   hoveredGemaal.value = null
 }
 
+// Bereken oppervlakte uit Leaflet layer (in hectare)
+const calculateAreaFromLayer = (layer) => {
+  if (!layer) return null
+  
+  try {
+    // Gebruik Leaflet's getBounds() en bereken oppervlakte
+    if (layer.getBounds) {
+      const bounds = layer.getBounds()
+      if (bounds.isValid()) {
+        const sw = bounds.getSouthWest()
+        const ne = bounds.getNorthEast()
+        
+        // Eenvoudige rechthoek benadering (voor tooltip is dit voldoende)
+        const latDiff = ne.lat - sw.lat
+        const lngDiff = ne.lng - sw.lng
+        
+        // Converteer graden naar meters (ongeveer)
+        const latMeters = latDiff * 111000 // 1 graad ≈ 111 km
+        const lngMeters = lngDiff * 111000 * Math.cos((sw.lat + ne.lat) / 2 * Math.PI / 180)
+        
+        const areaM2 = Math.abs(latMeters * lngMeters)
+        return areaM2 / 10000 // Converteer naar hectare
+      }
+    }
+    
+    // Alternatief: gebruik getLatLngs voor polygonen
+    if (layer.getLatLngs) {
+      const latlngs = layer.getLatLngs()
+      if (latlngs && latlngs.length > 0) {
+        // Shoelace formula voor polygon oppervlakte
+        const coords = Array.isArray(latlngs[0]) ? latlngs[0] : latlngs
+        if (coords.length > 2) {
+          let area = 0
+          for (let i = 0; i < coords.length; i++) {
+            const j = (i + 1) % coords.length
+            const p1 = coords[i]
+            const p2 = coords[j]
+            const lat1 = (p1.lat !== undefined) ? p1.lat : p1[0]
+            const lng1 = (p1.lng !== undefined) ? p1.lng : p1[1]
+            const lat2 = (p2.lat !== undefined) ? p2.lat : p2[0]
+            const lng2 = (p2.lng !== undefined) ? p2.lng : p2[1]
+            
+            area += (lng1 * lat2 - lng2 * lat1)
+          }
+          
+          // Converteer naar vierkante meters (benadering)
+          const areaM2 = Math.abs(area) * 111000 * 111000 / 2
+          return areaM2 / 10000 // Converteer naar hectare
+        }
+      }
+    }
+  } catch (e) {
+    console.warn('Fout bij berekenen oppervlakte:', e)
+  }
+  
+  return null
+}
+
 // Toon peilgebied tooltip met zomer- en winterpeil
 const showPeilgebiedTooltip = (feature, layer, layerName) => {
   const props = feature.properties
   const naam = props.NAAM || props.CODE || 'Onbekend'
   
   let tooltipContent = `<div style="min-width: 200px;"><strong>${naam}</strong><br/>`
+  
+  // Oppervlakte (prioriteit: property > berekend)
+  let oppervlakteHa = null
+  if (props.OPPERVLAKTE !== null && props.OPPERVLAKTE !== undefined) {
+    // Oppervlakte in m², converteren naar hectare
+    oppervlakteHa = props.OPPERVLAKTE / 10000
+  } else if (props.oppervlakte !== null && props.oppervlakte !== undefined) {
+    // Alternatieve property naam
+    oppervlakteHa = props.oppervlakte / 10000
+  } else {
+    // Bereken uit layer geometry
+    const calculatedArea = calculateAreaFromLayer(layer)
+    if (calculatedArea) {
+      oppervlakteHa = calculatedArea
+    }
+  }
+  
+  if (oppervlakteHa !== null) {
+    tooltipContent += `<div style="margin-top: 6px;">📐 Oppervlakte: <strong style="color: #10b981;">${oppervlakteHa.toFixed(2)} ha</strong></div>`
+  }
   
   if (props.ZOMERPEIL !== null && props.ZOMERPEIL !== undefined) {
     tooltipContent += `<div style="margin-top: 6px;">☀️ Zomerpeil: <strong style="color: #f59e0b;">${props.ZOMERPEIL.toFixed(2)} m NAP</strong></div>`
@@ -1434,7 +1512,7 @@ const showPeilgebiedTooltip = (feature, layer, layerName) => {
     tooltipContent += `<div style="margin-top: 6px; padding-top: 6px; border-top: 1px solid #e5e7eb; font-size: 0.85em; color: #6b7280;">${props.SOORTPEILBEHEER}</div>`
   }
   
-  if (!props.ZOMERPEIL && !props.WINTERPEIL && !props.SOORTPEILBEHEER) {
+  if (!oppervlakteHa && !props.ZOMERPEIL && !props.WINTERPEIL && !props.SOORTPEILBEHEER) {
     tooltipContent += `<div style="margin-top: 4px; font-size: 0.85em; color: #9ca3af;">Geen peilgegevens beschikbaar</div>`
   }
   

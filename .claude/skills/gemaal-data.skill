@@ -1,0 +1,90 @@
+{
+  "name": "gemaal-data",
+  "description": "Skill voor het ophalen van gemaal data van Hydronet API en het verwerken met sliding window analyse voor trend detectie",
+  "version": "1.0.0",
+  "author": "Peilbeheer Team",
+  "skills": {
+    "fetch-gemaal-data": {
+      "description": "Haal real-time gemaal data op van Hydronet Water Control Room API voor een specifiek gemaal",
+      "parameters": {
+        "gemaal_code": {
+          "type": "string",
+          "description": "De code van het gemaal (bijv. '176-036-00021')",
+          "required": true
+        },
+        "include_raw": {
+          "type": "boolean",
+          "description": "Include raw API response in output",
+          "required": false,
+          "default": false
+        }
+      },
+      "handler": ".claude/skills/fetch-gemaal-data.sh"
+    },
+    "process-sliding-windows": {
+      "description": "Verwerk tijdreeks data met sliding window analyse voor meerdere tijdvensters (30, 60, 180 min) inclusief trend detectie",
+      "parameters": {
+        "gemaal_code": {
+          "type": "string",
+          "description": "De code van het gemaal om te verwerken",
+          "required": false
+        },
+        "data_source": {
+          "type": "string",
+          "description": "Bron van de data: 'api' (ophalen van Hydronet) of 'json' (van gemaal_status_latest.json)",
+          "required": false,
+          "default": "api"
+        },
+        "window_sizes": {
+          "type": "array",
+          "description": "Lijst van window sizes in minuten (bijv. [30, 60, 180])",
+          "required": false,
+          "default": [30, 60, 180]
+        }
+      },
+      "handler": ".claude/skills/process-sliding-windows.sh"
+    },
+    "refresh-all-gemalen": {
+      "description": "Ververs alle gemaal data en genereer nieuwe JSON output met sliding window trends",
+      "parameters": {
+        "output_path": {
+          "type": "string",
+          "description": "Pad waar de output JSON moet worden opgeslagen",
+          "required": false,
+          "default": "simulatie-peilbeheer/public/data/gemaal_status_latest.json"
+        },
+        "rate_limit_seconds": {
+          "type": "number",
+          "description": "Aantal seconden tussen API requests",
+          "required": false,
+          "default": 0.5
+        }
+      },
+      "handler": "python3 peilbesluiten/generate_gemaal_status.py"
+    },
+    "auto-refresh-gemaal-data": {
+      "description": "Automatische periodieke data refresh - haalt elke 30 minuten (configureerbaar) nieuwe gemaal data op",
+      "parameters": {
+        "interval": {
+          "type": "number",
+          "description": "Interval in minuten tussen refreshes",
+          "required": false,
+          "default": 30
+        },
+        "max_cycles": {
+          "type": "number",
+          "description": "Maximum aantal refresh cycli (0 = oneindig)",
+          "required": false,
+          "default": 0
+        },
+        "run_once": {
+          "type": "boolean",
+          "description": "Voer slechts één refresh uit en stop",
+          "required": false,
+          "default": false
+        }
+      },
+      "handler": ".claude/skills/auto-refresh-gemaal-data.sh"
+    }
+  }
+}
