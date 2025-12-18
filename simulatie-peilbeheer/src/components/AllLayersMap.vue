@@ -19,7 +19,7 @@
         </button>
       </div>
 
-      <div v-if="legendExpanded" class="space-y-4">
+      <div v-if="legendExpanded" id="legend-content" class="space-y-4">
         <!-- Categorieën -->
         <div v-for="category in categories" :key="category.name" class="border-b border-gray-200 pb-3 last:border-b-0">
           <div class="flex items-center justify-between mb-2">
@@ -162,13 +162,60 @@
       </div>
     </div>
 
-    <!-- Loading Indicator -->
-    <div v-if="loading" class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg shadow-2xl p-6 z-40">
+    <!-- Loading Indicator (CCG richtlijn - verbeterde loading state) -->
+    <div 
+      v-if="loading" 
+      class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg shadow-2xl p-6 z-40"
+      role="status"
+      aria-live="polite"
+      aria-label="Data wordt geladen"
+    >
       <div class="flex items-center gap-3">
         <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-        <span class="text-sm font-semibold text-gray-700">Laden...</span>
+        <div>
+          <span class="text-sm font-semibold text-gray-700">Laden...</span>
+          <p v-if="loadingMessage" class="text-xs text-gray-500 mt-1">{{ loadingMessage }}</p>
+        </div>
       </div>
     </div>
+
+    <!-- Error State Panel (CCG richtlijn) -->
+    <div
+      v-if="dataError"
+      class="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-red-50 border-2 border-red-200 rounded-lg shadow-lg p-4 z-40 max-w-md"
+      role="alert"
+      aria-live="assertive"
+    >
+      <div class="flex items-start gap-3">
+        <span class="text-2xl">⚠️</span>
+        <div class="flex-1">
+          <h4 class="font-bold text-red-800 mb-1">Probleem met data ophalen</h4>
+          <p class="text-sm text-red-700 mb-2">{{ dataError }}</p>
+          <button
+            @click="retryDataLoad"
+            class="text-sm px-3 py-1 bg-red-600 text-white rounded hover:bg-red-700"
+            aria-label="Probeer opnieuw data op te halen"
+          >
+            Opnieuw proberen
+          </button>
+        </div>
+        <button
+          @click="dataError = null"
+          class="text-red-400 hover:text-red-600"
+          aria-label="Sluit waarschuwing"
+        >
+          ×
+        </button>
+      </div>
+    </div>
+
+    <!-- Data Quality Indicator (CCG richtlijn) -->
+    <DataQualityIndicator 
+      v-if="gemaalStatus"
+      :stats="gemaalStatus"
+      :success-rate="dataSuccessRate"
+      :last-error="dataError"
+    />
 
     <!-- Gemaal Grafiek Component -->
     <GemaalChart 
@@ -211,14 +258,16 @@
 </style>
 
 <script setup>
-import { ref, onMounted, reactive, computed } from 'vue'
+import { ref, onMounted, onUnmounted, reactive, computed, watch } from 'vue'
 import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
 import GemaalChart from './GemaalChart.vue'
+import DataQualityIndicator from './DataQualityIndicator.vue'
 
 const map = ref(null)
 const selectedFeature = ref(null)
 const loading = ref(false)
+const loadingMessage = ref('')
 const legendExpanded = ref(true)
 const gemaalRealtimeData = ref({}) // Cache voor real-time gemaal data
 const hoveredGemaal = ref(null)
@@ -226,6 +275,8 @@ const gemaalStatus = ref(null) // Global status for all gemalen
 const showChart = ref(false) // Toon/verberg grafiek component
 const selectedGemaal = ref(null) // Geselecteerd gemaal voor grafiek
 const gemalenMetData = ref(new Set()) // Set van gemaal codes die data hebben
+const dataError = ref(null) // Error state voor data ophalen (CCG richtlijn)
+const dataSuccessRate = ref(null) // Success rate voor data kwaliteit (CCG richtlijn)
 
 // Hydronet API configuratie
 const HYDRONET_CHART_ID = 'e743fb87-2a02-4f3e-ac6c-03d03401aab8'
@@ -1104,6 +1155,56 @@ const closeInfo = () => {
   selectedFeature.value = null
 }
 
+// Keyboard shortcuts (CCG richtlijn - toegankelijkheid)
+const handleKeyPress = (event) => {
+  // Escape sluit modals
+  if (event.key === 'Escape') {
+    if (selectedFeature.value) {
+      closeInfo()
+    }
+    if (showChart.value) {
+      showChart.value = false
+    }
+    if (dataError.value) {
+      dataError.value = null
+    }
+  }
+  
+  // L toggle legenda
+  if ((event.key === 'l' || event.key === 'L') && !event.ctrlKey && !event.metaKey) {
+    legendExpanded.value = !legendExpanded.value
+  }
+}
+
+// Keyboard shortcuts (CCG richtlijn - toegankelijkheid)
+const handleKeyPress = (event) => {
+  // Escape sluit modals
+  if (event.key === 'Escape') {
+    if (selectedFeature.value) {
+      closeInfo()
+    }
+    if (showChart.value) {
+      showChart.value = false
+    }
+    if (dataError.value) {
+      dataError.value = null
+    }
+  }
+  
+  // L toggle legenda
+  if ((event.key === 'l' || event.key === 'L') && !event.ctrlKey && !event.metaKey) {
+    legendExpanded.value = !legendExpanded.value
+  }
+}
+
+onMounted(() => {
+  window.addEventListener('keydown', handleKeyPress)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('keydown', handleKeyPress)
+})
+
 // Get gemaal trend data for selected feature
 const selectedGemaalTrends = computed(() => {
   if (!selectedFeature.value || selectedFeature.value.type !== 'gemalen') return null
@@ -1383,11 +1484,28 @@ const loadInitialLayers = async () => {
 
 const fetchGemaalStatus = async () => {
   try {
+    loading.value = true
+    loadingMessage.value = 'Gemaal status ophalen...'
+    dataError.value = null
+    
     const response = await fetch('./data/gemaal_status_latest.json')
     if (response.ok) {
       const data = await response.json()
       gemaalStatus.value = data
+      
+      // Bereken success rate (CCG richtlijn)
+      if (data.stations) {
+        const total = Object.keys(data.stations).length
+        const successful = Object.values(data.stations).filter(s => 
+          s.status && s.status !== 'error' && s.status !== 'unknown'
+        ).length
+        dataSuccessRate.value = total > 0 ? successful / total : null
+      }
+      
       console.log('Global gemaal status loaded:', data.active_stations, 'active stations')
+      
+      loading.value = false
+      loadingMessage.value = ''
       
       // Update gemalen met data lijst als die al geladen is
       if (gemalenMetData.value.size > 0) {
@@ -1404,8 +1522,18 @@ const fetchGemaalStatus = async () => {
       }
     }
   } catch (e) {
-    console.warn('Could not load global gemaal status:', e)
+    console.error('Could not load global gemaal status:', e)
+    loading.value = false
+    loadingMessage.value = ''
+    dataError.value = `Fout bij ophalen gemaal status: ${e.message || 'Onbekende fout'}`
+    dataSuccessRate.value = null
   }
+}
+
+// Retry data load functie (CCG richtlijn)
+const retryDataLoad = () => {
+  dataError.value = null
+  fetchGemaalStatus()
 }
 
 // Laad lijst van gemalen met beschikbare data

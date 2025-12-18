@@ -50,6 +50,36 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
+def validate_gemaal_data(gemaal_code: str, debiet: float, timestamp_ms: int) -> bool:
+    """
+    Valideer dat gemaaldata realistisch is (CCG richtlijn - data kwaliteit).
+    
+    Args:
+        gemaal_code: Code van het gemaal
+        debiet: Debiet waarde in m³/s
+        timestamp_ms: Timestamp in milliseconden
+    
+    Returns:
+        True als data valide is, False anders
+    """
+    # Check 1: Realistic range
+    if debiet < 0:
+        logger.warning(f"Negatief debiet voor {gemaal_code}: {debiet}")
+        return False
+    if debiet > 1000:  # Onrealistisch hoog voor dit type gemaal
+        logger.warning(f"Debiet te hoog voor {gemaal_code}: {debiet} m³/s")
+        return False
+    
+    # Check 2: Timestamp freshness
+    if timestamp_ms > 0:
+        timestamp = datetime.fromtimestamp(timestamp_ms / 1000)
+        age = datetime.now() - timestamp
+        if age.total_seconds() > 3600 * 2:  # Ouder dan 2 uur
+            logger.warning(f"Data te oud voor {gemaal_code}: {age}")
+            return False
+    
+    return True
+
 def main():
     logger.info("Starting Digital Twin Data Generation...")
     
@@ -98,6 +128,12 @@ def main():
                     
                     debiet = last_point.get('value', 0)
                     status = last_point.get('status', 'uit')
+                    
+                    # Data validatie (CCG richtlijn)
+                    if not validate_gemaal_data(code, debiet, last_point.get('timestamp_ms', 0)):
+                        logger.warning(f"Data validatie gefaald voor {code}, overslaan...")
+                        summary_data["stations"][code] = {"status": "error", "error": "Data validatie gefaald"}
+                        continue
                     
                     # Process with sliding windows (30 min, 1 hour, 3 hours)
                     windowed_data = process_gemaal_series(
