@@ -21,31 +21,31 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          cache: 'npm'
-          cache-dependency-path: simulatie-peilbeheer/package-lock.json
-      
+          node-version: "20"
+          cache: "npm"
+          cache-dependency-path: web/package-lock.json
+
       - name: Install dependencies
         run: npm ci
-        working-directory: ./simulatie-peilbeheer
-      
+        working-directory: ./web
+
       - name: Build for GitHub Pages
         run: npm run build:github
-        working-directory: ./simulatie-peilbeheer
+        working-directory: ./web
         env:
           GITHUB_PAGES: true
-      
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
-      
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./simulatie-peilbeheer/dist
+          path: ./web/dist
 
   deploy:
     environment:

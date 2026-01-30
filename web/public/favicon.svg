@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="140 20 220 220">
+  <!-- Background (sky) -->
+  <rect width="500" height="300" fill="#e0f2fe"/>
+  
+  <!-- Peat layer (brown) -->
+  <rect x="0" y="50" width="500" height="160" fill="#8b4513" opacity="0.8"/>
+  
+  <!-- Mineral layer (light brown/sand) -->
+  <rect x="0" y="210" width="500" height="500" fill="#d2b48c" opacity="0.8"/>
+  
+  <!-- Current surface level (maaiveld) -->
+  <line x1="0" y1="50" x2="200" y2="50" stroke="#22c55e" stroke-width="4"/>
+  <line x1="300" y1="50" x2="500" y2="50" stroke="#22c55e" stroke-width="4"/>
+  
+  <!-- Sloot background (sky color) -->
+  <polygon points="200,50 220,130 280,130 300,50" fill="#e0f2fe"/>
+  
+  <!-- Water in sloot -->
+  <polygon points="208,82 292,82 280,130 220,130" fill="#3b82f6" opacity="0.7"/>
+  
+  <!-- Sloot edges -->
+  <line x1="200" y1="50" x2="220" y2="130" stroke="#8b5cf6" stroke-width="2"/>
+  <line x1="300" y1="50" x2="280" y2="130" stroke="#8b5cf6" stroke-width="2"/>
+  <line x1="220" y1="130" x2="280" y2="130" stroke="#8b5cf6" stroke-width="2"/>
+  
+  <!-- Grass on left -->
+  <line x1="160" y1="50" x2="162.74" y2="40.78" stroke="#22c55e" stroke-width="2"/>
+  <line x1="168" y1="50" x2="170.51" y2="43.64" stroke="#22c55e" stroke-width="2"/>
+  <line x1="176" y1="50" x2="175.97" y2="45" stroke="#22c55e" stroke-width="2"/>
+  <line x1="184" y1="50" x2="181.46" y2="43.6" stroke="#22c55e" stroke-width="2"/>
+  <line x1="192" y1="50" x2="189.28" y2="40.73" stroke="#22c55e" stroke-width="2"/>
+  
+  <!-- Grass on right -->
+  <line x1="308" y1="50" x2="310.52" y2="40.38" stroke="#22c55e" stroke-width="2"/>
+  <line x1="316" y1="50" x2="318.73" y2="43.25" stroke="#22c55e" stroke-width="2"/>
+  <line x1="324" y1="50" x2="324.42" y2="44.97" stroke="#22c55e" stroke-width="2"/>
+  <line x1="332" y1="50" x2="329.73" y2="43.96" stroke="#22c55e" stroke-width="2"/>
+  <line x1="340" y1="50" x2="337.12" y2="41.15" stroke="#22c55e" stroke-width="2"/>
+</svg>

@@ -30,13 +30,16 @@ from datetime import datetime
 from pathlib import Path
 import sys
 
+import duckdb
+
 # Import the fetcher class
 from fetch_hydronet_gemaal_data import HydronetGemaalDataFetcher, CHART_ID
 from sliding_window_processor import process_gemaal_series
 
 # Configuration
-OUTPUT_FILE = Path("../simulatie-peilbeheer/public/data/gemaal_status_latest.json")
+OUTPUT_FILE = Path("../web/public/data/gemaal_status_latest.json")
 GEOJSON_FILE = Path("rijnland_kaartlagen/Gemaal/Gemaal_layer0.geojson")
+DB_FILE = Path("db/rijnland.db")
 LOG_DIR = Path("logs")
 
 # Setup logging
@@ -50,35 +53,68 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-def validate_gemaal_data(gemaal_code: str, debiet: float, timestamp_ms: int) -> bool:
+def validate_gemaal_data(gemaal_code: str, debiet: float, timestamp_ms: int) -> tuple[bool, str]:
     """
     Valideer dat gemaaldata realistisch is (CCG richtlijn - data kwaliteit).
     
-    Args:
-        gemaal_code: Code van het gemaal
-        debiet: Debiet waarde in m³/s
-        timestamp_ms: Timestamp in milliseconden
-    
     Returns:
-        True als data valide is, False anders
+        (bool, str): (is_valide, foutmelding)
     """
     # Check 1: Realistic range
     if debiet < 0:
-        logger.warning(f"Negatief debiet voor {gemaal_code}: {debiet}")
-        return False
+        return False, f"Negatief debiet: {debiet}"
     if debiet > 1000:  # Onrealistisch hoog voor dit type gemaal
-        logger.warning(f"Debiet te hoog voor {gemaal_code}: {debiet} m³/s")
-        return False
+        return False, f"Debiet te hoog: {debiet} m³/s"
     
     # Check 2: Timestamp freshness
     if timestamp_ms > 0:
         timestamp = datetime.fromtimestamp(timestamp_ms / 1000)
         age = datetime.now() - timestamp
-        if age.total_seconds() > 3600 * 2:  # Ouder dan 2 uur
-            logger.warning(f"Data te oud voor {gemaal_code}: {age}")
-            return False
+        
+        # We zijn nu coulant met de leeftijd (24 uur i.p.v. 2 uur) 
+        # omdat sommige stations minder vaak updaten maar de status 'aan' nog wel klopt.
+        if age.total_seconds() > 3600 * 24:  
+            return False, f"Data te oud: {age.total_seconds()/3600:.1f} uur"
+        
+        if age.total_seconds() < -3600: # Meer dan een uur in de toekomst
+            return False, f"Data in de toekomst: {age.total_seconds()/3600:.1f} uur"
+            
+    return True, ""
+
+def get_gemaal_codes(fetcher):
+    """
+    Haal lijst met gemaalcodes op.
+    Probeert eerst DuckDB, valt terug op GeoJSON.
+    """
+    # 1. Probeer DuckDB
+    if DB_FILE.exists():
+        try:
+            logger.info(f"Connecting to DuckDB: {DB_FILE}")
+            con = duckdb.connect(str(DB_FILE))
+            
+            # Check if Gemaal table exists
+            tables = con.execute("SHOW TABLES").fetchall()
+            table_names = [t[0] for t in tables]
+            
+            if 'Gemaal' in table_names:
+                result = con.execute("SELECT CODE FROM Gemaal WHERE CODE IS NOT NULL").fetchall()
+                codes = [r[0] for r in result if r[0]]
+                logger.info(f"Loaded {len(codes)} pumping stations from DuckDB")
+                con.close()
+                return codes
+            else:
+                logger.warning("Table 'Gemaal' not found in DuckDB")
+                con.close()
+        except Exception as e:
+            logger.error(f"Error reading from DuckDB: {e}")
     
-    return True
+    # 2. Fallback naar GeoJSON
+    if GEOJSON_FILE.exists():
+        logger.info(f"Falling back to GeoJSON: {GEOJSON_FILE}")
+        return fetcher.load_gemaal_codes_from_geojson(str(GEOJSON_FILE))
+    else:
+        logger.error(f"GeoJSON file not found: {GEOJSON_FILE}")
+        return []
 
 def main():
     logger.info("Starting Digital Twin Data Generation...")
@@ -89,13 +125,14 @@ def main():
     temp_dir.mkdir(exist_ok=True)
     fetcher = HydronetGemaalDataFetcher(CHART_ID, temp_dir)
     
-    # 1. Load all gemalen from GeoJSON
-    if not GEOJSON_FILE.exists():
-        logger.error(f"GeoJSON file not found: {GEOJSON_FILE}")
+    # 1. Load all gemalen codes
+    codes = get_gemaal_codes(fetcher)
+    
+    if not codes:
+        logger.error("No pumping station codes found!")
         sys.exit(1)
         
-    codes = fetcher.load_gemaal_codes_from_geojson(str(GEOJSON_FILE))
-    logger.info(f"Found {len(codes)} pumping stations in GeoJSON")
+    logger.info(f"Found {len(codes)} pumping stations to process")
     
     # 2. Fetch data for all gemalen
     timestamp = datetime.now()
@@ -130,9 +167,10 @@ def main():
                     status = last_point.get('status', 'uit')
                     
                     # Data validatie (CCG richtlijn)
-                    if not validate_gemaal_data(code, debiet, last_point.get('timestamp_ms', 0)):
-                        logger.warning(f"Data validatie gefaald voor {code}, overslaan...")
-                        summary_data["stations"][code] = {"status": "error", "error": "Data validatie gefaald"}
+                    is_valide, fout = validate_gemaal_data(code, debiet, last_point.get('timestamp_ms', 0))
+                    if not is_valide:
+                        logger.warning(f"Validatie gefaald voor {code}: {fout}")
+                        summary_data["stations"][code] = {"status": "error", "error": fout}
                         continue
                     
                     # Process with sliding windows (30 min, 1 hour, 3 hours)

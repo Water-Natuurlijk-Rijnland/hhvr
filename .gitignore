@@ -5,6 +5,14 @@
 dist/
 build/
 
+# Data directories
+data/kaartlagen/
+data/realtime/
+data/cache/
+data/temp/
+temp_data/
+logs/
+
 # Large map layers (GeoJSON files)
 *.geojson
 
@@ -36,6 +44,7 @@ pip-log.txt
 pip-delete-this-directory.txt
 .pytest_cache/
 *.egg-info/
+.ropeproject/
 
 # IDEs
 .vscode/
@@ -47,5 +56,5 @@ pip-delete-this-directory.txt
 # Logs
 *.log
 
-# Node modules (if any)
+# Node modules
 node_modules/

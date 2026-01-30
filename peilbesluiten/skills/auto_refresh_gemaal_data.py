@@ -159,7 +159,12 @@ def main():
     output_path = Path(__file__).parent.parent / args.output_path
 
     # Find Python command
-    python_cmd = sys.executable
+    # Prefer miniconda python if it exists and has requests
+    miniconda_python = Path("/opt/homebrew/Caskroom/miniconda/base/bin/python3")
+    if miniconda_python.exists():
+        python_cmd = str(miniconda_python)
+    else:
+        python_cmd = sys.executable
 
     # Validate script exists
     if not script_path.exists():
