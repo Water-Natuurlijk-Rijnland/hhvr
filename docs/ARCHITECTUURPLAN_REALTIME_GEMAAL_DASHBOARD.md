@@ -8,6 +8,11 @@
 
 Dit architectuurplan beschrijft de integratie van real-time gemaaldata in de Digital Twin visualisatie voor het Hoogheemraadschap van Rijnland. Het systeem haalt live data op van gemalen (pompstations) via de Hydronet Water Control Room API en visualiseert deze in een Vue.js frontend applicatie met een dashboard panel.
 
+### 1.3 Simulatie & PID Engine
+- **Dynamische Peilbeheer**: Een simulatiemodel dat regenval en pompactie combineert.
+- **PID Control**: Implementatie van Proportional-Integral-Derivative sturing voor realistische pompautomatisering.
+- **Interactieve Feedback**: Directe visualisatie van de effecten van parameterspecificaties op de waterbalans.
+
 ---
 
 ## 1. Systeemoverzicht
@@ -918,6 +923,27 @@ Het systeem is **production-ready** wanneer:
 - ✅ Fetch tijd < 30 seconden (met async)
 - ✅ Success rate > 90%
 - ✅ Monitoring en alerting actief
+
+---
+
+## 8. Simulatie Engine & PID Control
+
+### 8.1 Waterbalans Model
+De simulatie in `web/src/utils/waterbalans.js` berekent de waterstand op basis van een tijdstapsgewijze balans:
+- **Toevoer**: Neerslagintensiteit * Oppervlakte peilgebied.
+- **Afvoer**: Gemaaldebiet, infiltratie en verdamping.
+- **Opslag**: De netto balans vertaalt zich naar een peilstijging of -daling op basis van het oppervlakte.
+
+### 8.2 PID Controller Implementatie
+Voor de pompsturing wordt een PID-regelaar gebruikt om "pendelen" (hard aan/uit schakelen) te voorkomen en een rustig peilbeheer te simuleren:
+- **P (Proportional)**: Directe reactie op de afwijking van het streefpeil.
+- **I (Integral)**: Werkt de blijvende afwijking weg (bijv. bij constante regen).
+- **D (Derivative)**: Dempt de reactie bij snelle fluctuaties om doorschieten te voorkomen.
+
+De output van de PID wordt geclamped tussen 0% en 100% van de gemaalcapaciteit, met **anti-windup** logica om verzadiging van de integrator te voorkomen.
+
+### 8.3 Digital Twin Integratie
+De simulatiekaart integreert live gegevens van de `gemaal_status_latest.json`. Hierdoor kan de gebruiker tijdens een simulatie zien welke gemalen in de omliggende gebieden daadwerkelijk actief zijn in de praktijk, wat context biedt aan de gesimuleerde scenario's.
 
 ---
 

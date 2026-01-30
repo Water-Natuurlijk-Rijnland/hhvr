@@ -1,84 +1,56 @@
 # Peilbeheer Visualisatie - Rijnland Kaartlagen
 
-Interactieve kaart applicatie voor het visualiseren van Rijnland waterbeheer data, inclusief peilgebieden, gemalen, stuwen en andere infrastructuur.
+Interactieve kaart applicatie voor het visualiseren van Rijnland waterbeheer data, inclusief peilgebieden, gemalen, stuwen en een geavanceerde regen-simulatie.
 
 ## Features
 
-- 🗺️ **Alle Rijnland Kaartlagen**: 60+ kaartlagen beschikbaar
-- 📊 **Hover Informatie**: Zomer- en winterpeil bij hover over peilgebieden
-- 🏭 **Real-time Gemaal Data**: Live pompsnelheden en status
-- 🎨 **Interactieve Legenda**: Categorieën met laagbeheer
-- 📱 **Responsive Design**: Werkt op desktop en mobiel
+- 🗺️ **Alle Rijnland Kaartlagen**: 60+ kaartlagen beschikbaar (Peilgebieden, Gemalen, Stuwen, etc.).
+- 📊 **Real-time Digital Twin**: Live status van gemalen (blauw = actief, grijs = stand-by).
+- 🌧️ **Regenbui Simulatie**: Simuleer wateroverlast in specifieke peilgebieden.
+- ⛽ **Slimme Pompsturing**: Geavanceerde **PID-regeling** voor gemalen in de simulatie voor stabiel peilbeheer.
+- 📈 **Interactieve Grafiek**: Visualisatie van waterstand, regenintensiteit en gemaal-inzet.
+- 📱 **Responsive Design**: Optimaal voor gebruik op diverse schermen.
 
 ## Lokale Development
 
 ```bash
+# Ga naar de web directory
+cd web
+
 # Installeer dependencies
 npm install
 
 # Start development server
 npm run dev
-
-# Build voor productie
-npm run build
 ```
-
-## GitHub Pages Deployment
-
-De applicatie wordt automatisch gedeployed naar GitHub Pages via GitHub Actions wanneer er naar de `main` branch wordt gepusht.
-
-### Kaartlagen Setup
-
-De kaartlagen (GeoJSON bestanden) zijn nodig voor de volledige functionaliteit. Er zijn twee opties:
-
-#### Optie 1: Lokale Kaartlagen (Aanbevolen voor Development)
-
-1. Download de kaartlagen met het Python script:
-```bash
-cd ../peilbesluiten
-python3 download_rijnland_layers.py
-```
-
-2. De kaartlagen worden automatisch gekopieerd naar `public/peilbesluiten/rijnland_kaartlagen/` tijdens de build
-
-#### Optie 2: Server Fallback
-
-Als lokale kaartlagen niet beschikbaar zijn, gebruikt de applicatie automatisch de ArcGIS server als fallback.
-
-### GitHub Pages Configuratie
-
-1. Ga naar **Settings** → **Pages** in je GitHub repository
-2. Selecteer **Source**: `GitHub Actions`
-3. De workflow zal automatisch draaien bij elke push naar `main`
-
-De applicatie is beschikbaar op: `https://water-natuurlijk-rijnland.github.io/hhvr/`
 
 ## Structuur
 
 ```
-simulatie-peilbeheer/
+web/
 ├── src/
 │   ├── components/
-│   │   ├── AllLayersMap.vue      # Hoofdcomponent met alle lagen
-│   │   ├── PolderMap.vue        # Polder simulatie
+│   │   ├── RegenbuiSimulatie.vue  # Hoofdkaart simulatie & monitoring
+│   │   ├── SimulatiePanel.vue     # Interactief paneel voor parameters
+│   │   ├── WaterstandGrafiek.vue  # Chart.js grafiek met PID-output
+│   │   ├── AllLayersMap.vue       # Overzichtskaart alle lagen
 │   │   └── ...
+│   ├── utils/
+│   │   └── waterbalans.js         # Kern-engine met PID-algoritme
 │   └── App.vue
 ├── public/
-│   └── peilbesluiten/           # Kaartlagen worden hier gekopieerd
-├── scripts/
-│   └── copy-kaartlagen.js       # Script om kaartlagen te kopiëren
-└── .github/
-    └── workflows/
-        └── deploy.yml           # GitHub Actions deployment
+│   └── data/                      # GeoJSON en status JSON data
+└── vite.config.js
 ```
 
 ## Technologie
 
-- **Vue 3** - Frontend framework
-- **Leaflet** - Kaart visualisatie
-- **Tailwind CSS** - Styling
+- **Vue 3** - Frontend framework (Composition API)
+- **Leaflet** - Kaart visualisatie met `shallowRef` voor performance
+- **Chart.js** - Data visualisatie voor waterstanden
+- **Tailwind CSS** - Moderne UI styling
 - **Vite** - Build tool
-- **Proj4** - Coördinaat transformatie (RD → WGS84)
+- **Proj4** - RD naar WGS84 coördinaat transformaties
 
 ## Licentie
 
