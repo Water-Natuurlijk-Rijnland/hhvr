@@ -58,3 +58,8 @@ pip-delete-this-directory.txt
 
 # Node modules
 node_modules/
+
+# Databases
+*.db
+*.sqlite
+*.duckdb
